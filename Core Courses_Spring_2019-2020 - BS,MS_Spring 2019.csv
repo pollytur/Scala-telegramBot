@@ -11,10 +11,10 @@ MONDAY,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,Rabab Marouf,,Georgy Gelvanovsky,Guzel Fazlyeva,,,Alexey Kanatov,,,,,,,,,,,,,,,,,,,,Marcus Freiherr Ebner von Eschenbach,Andrey Andreev,
 ,,,,,,,101,,102,314,,,105,,,,,,,,,,,,,,,,,,,,318,320,"101, 102, 314, 105, 318, 320"
 14:10-15:40,Data Structure and Algorithms (Lec) ,,,,,,,,,,,,Data Modeling and Databases 2 (Tutorial),,,,,,,,,,Network and Cyber Security (Lec),Robotics Systems (Lec),,,,,,,,,Advanced robotics (Lec),,
-,Adil Khan,,,,,,,,,,,,Luiz Araújo,,,,,,,,,,"Kirill Saltanov/Saif Saad","Igor Gaponov/Alexander Klimchik",,,,,,,,,"Igor Gaponov/Alexander Klimchik",,
+,Adil Khan,,,,,,,,,,,,Luiz Araújo,,,,,,,,,,Kirill Saltanov/Saif Saad,Igor Gaponov/Alexander Klimchik,,,,,,,,,Igor Gaponov/Alexander Klimchik,,
 ,108,,,,,,,,,,,,105,,,,,,,,,,300,321,,,,,,,,,321,,"108, 105, 300, 321, 321"
 15:45-17:15,Data Structure and Algorithms (tutorial) ,,,,,,,,,,,,Introduction to AI (Lab),,Introduction to AI (Lab),,Introduction to AI (Lab),,,,,,Network and Cyber Security (Lab.),Robotics Systems (Lab),,,,,,,,,,,
-,Luiz Araújo,,,,,,,,,,,,Hamna Aslam,,Rufina Galieva,,Nikita Lozhnikov,,,,,,Sergey Grebennikov,"Simeon Nedelchev / Mikhail Ostanin",,,,,,,,,,,
+,Luiz Araújo,,,,,,,,,,,,Hamna Aslam,,Rufina Galieva,,Nikita Lozhnikov,,,,,,Sergey Grebennikov,Simeon Nedelchev / Mikhail Ostanin,,,,,,,,,,,
 ,108,,,,,,,,,,,,303,,314,,316,,,,,,300,317,,,,,,,,,,,"108, 303, 314, 316, 300, 317"
 17:20-18:50,,,,,,,,,,,,,,,,,,Introduction to AI (Lab),Reserve for elective courses,,,,,,Reserve for elective courses,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,Nikita Lozhnikov,,,,,,,,,,,,,,,,,
@@ -24,19 +24,19 @@ MONDAY,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 TUESDAY,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 09:00-10:30,Analytical Geometry and Linear Algebra 2 (Lec),,,,,,,,,,,,Control Theory (Lec),,,,,,Digital Signal Processing (Lec),,,,,,Software Quality and Reliability (Lec)   ,,,,,,,,,,
-,Yaroslav Kholodov,,,,,,,,,,,,Sergey Savin,,,,,,Nikolay Shilov,,,,,,Andrey Sadovykh ,,,,,,,,,,
+,Yaroslav Kholodov,,,,,,,,,,,,Sergey Savin,,,,,,Nikolay Shilov,,,,,,Andrey Sadovykh,,,,,,,,,,
 ,108,,,,,,,,,,,,105,,,,,,106,,,,,,313,,,,,,,,,,"108, 105, 106, 313"
 10:35-12:05,Analytical Geometry and Linear Algebra 2 (tutorial),,,,,,,,,,,,Control Theory (Tutorial),,,,,,Information Retrieval (Lec)  ,,Digital Signal Processing (Lab),,Information Retrieval (Lec)  ,,Software Quality and Reliability (Lab)   ,Practical Machine Learning and Deep Learning (Lec),,,Models of software systems (Lec),,,,,,
-,Ivan Konyukhov,,,,,,,,,,,,Sergey Savin,,,,,,Alexey Kanatov,,Evgeniy Gryaznov,,A.Kanatov,,Shokhista Ergasheva,Vladimir Ivanov    ,,,Manuel Mazzara,,,,,,
+,Ivan Konyukhov,,,,,,,,,,,,Sergey Savin,,,,,,Alexey Kanatov,,Evgeniy Gryaznov,,A.Kanatov,,Shokhista Ergasheva,Vladimir Ivanov,,,Manuel Mazzara,,,,,,
 ,108,,,,,,,,,,,,105,,,,,,106,,314,,106,,101,313,,,321,,,,,,"108, 105, 106, 314, 106, 101, 313, 321"
-12:10-13:40,Data Structure and Algorithms (Lab),,,,Data Structure and Algorithms (Lab),,,,Data Structure and Algorithms (Lab),,,,,,,,Software Project (Prs.)*,,,,,Digital Signal Processing (Lab),Information Retrieval (Lab),,,Practical Machine Learning and Deep Learning  (Lab),,,"Analysis of software artifacts",,Advanced machine learning (Lec),,,,
+12:10-13:40,Data Structure and Algorithms (Lab),,,,Data Structure and Algorithms (Lab),,,,Data Structure and Algorithms (Lab),,,,,,,,Software Project (Prs.)*,,,,,Digital Signal Processing (Lab),Information Retrieval (Lab),,,Practical Machine Learning and Deep Learning (Lab),,,Analysis of software artifacts,,Advanced machine learning (Lec),,,,
 ,Nikolay Kudasov,,,,Dmitriy Gordin,,,,Rasheed Bader,,,,,,,,Artem Kruglov,,,,,Evgeniy Gryaznov,Rustam Gafarov,,,Youssef  Ibrahim,,,Andrey Sadovykh,,Muhammad Fahim,,,,
 ,313,,,,312,,,,101,,,,,,,,301,,,,,314,303,,,300,,,106,,321,,,,"313, 312, 101, 301, 314, 303, 300, 106, 321"
-14:10-15:40,Analytical Geometry and Linear Algebra 2 (Lab),,Data Structure and Algorithms (Lab),,Analytical Geometry and Linear Algebra 2 (Lab),,Data Structure and Algorithms (Lab),,Analytical Geometry and Linear Algebra 2 (Lab),,Data Structure and Algorithms (Lab),,,Control Theory (Lab),,Control Theory (Lab),,Control Theory (Lab),Information Retrieval (Lab),Digital Signal Processing (Lab),Software Systems Design (Lec),,,Digital Signal Processing (Lab),,Mobile robotics and Autonomous driving (Lec),,Practical Machine Learning and Deep Learning  (Lab),,,Advanced machine learning (Lab),,Autonomous vehicles (Lec),,
-,Ivan Konyukhov,,Nikolay Kudasov,,Viktor Kazorin,,Dmitriy Gordin,,Anastasia Puzankova,,Rasheed Bader,,,Mike Ivanov,,Shamil Mamedov,,Oleg Balakhnov,Rustam Gafarov,Vitaliy Romanov,Eugene Zuev  ,,,Azat Gaynutdinov,,"Gafurov Salimzhan/ Roman Fedorenko",,Youssef  Ibrahim,,,Imad Eddine Ibrahim Bekkouch,,"Gafurov Salimzhan/ Roman Fedorenko",,
+14:10-15:40,Analytical Geometry and Linear Algebra 2 (Lab),,Data Structure and Algorithms (Lab),,Analytical Geometry and Linear Algebra 2 (Lab),,Data Structure and Algorithms (Lab),,Analytical Geometry and Linear Algebra 2 (Lab),,Data Structure and Algorithms (Lab),,,Control Theory (Lab),,Control Theory (Lab),,Control Theory (Lab),Information Retrieval (Lab),Digital Signal Processing (Lab),Software Systems Design (Lec),,,Digital Signal Processing (Lab),,Mobile robotics and Autonomous driving (Lec),,Practical Machine Learning and Deep Learning (Lab),,,Advanced machine learning (Lab),,Autonomous vehicles (Lec),,
+,Ivan Konyukhov,,Nikolay Kudasov,,Viktor Kazorin,,Dmitriy Gordin,,Anastasia Puzankova,,Rasheed Bader,,,Mike Ivanov,,Shamil Mamedov,,Oleg Balakhnov,Rustam Gafarov,Vitaliy Romanov,Eugene Zuev,,,Azat Gaynutdinov,,Gafurov Salimzhan/ Roman Fedorenko,,Youssef  Ibrahim,,,Imad Eddine Ibrahim Bekkouch,,Gafurov Salimzhan/ Roman Fedorenko,,
 ,320,,316,,303,,318,,101,,312,,,306,,301,,317,313,300,105,,,102,,321,,314,,,106,,321,,"320, 316, 303, 318, 101, 312, 306, 301, 317, 313, 300, 105, 102, 321, 314, 106, 321"
 15:45-17:15,,,Analytical Geometry and Linear Algebra 2 (Lab),,,,Analytical Geometry and Linear Algebra 2 (Lab),,,,Analytical Geometry and Linear Algebra 2 (Lab),,Control Theory (Lab),Software Project (Prs.)*,Control Theory (Lab),Software Project (Prs.)*,Control Theory (Lab),Software Project (Prs.),Digital Signal Processing (Lab),Information Retrieval (Lab),,,Digital Signal Processing (Lab),,,Mobile robotics and Autonomous driving (Lab),,,,,,,Autonomous vehicles (Lab),,
-,,,Ivan Konyukhov,,,,Viktor Kazorin,,,,Anastasia Puzankova,,Shamil Mamedov,Artem Kruglov,Mike Ivanov,Alexandr Borisov,Oleg Balakhnov,Pavel Kolychev,Vitaliy Romanov,Rustam Gafarov,,,Azat Gaynutdinov,,,"Igor' Shapovalov/ Dmitry Devitt",,,,,,,"Igor' Shapovalov /Dmitry Devitt",,
+,,,Ivan Konyukhov,,,,Viktor Kazorin,,,,Anastasia Puzankova,,Shamil Mamedov,Artem Kruglov,Mike Ivanov,Alexandr Borisov,Oleg Balakhnov,Pavel Kolychev,Vitaliy Romanov,Rustam Gafarov,,,Azat Gaynutdinov,,,Igor' Shapovalov/ Dmitry Devitt,,,,,,,Igor' Shapovalov /Dmitry Devitt,,
 ,,,320,,,,303,,,,101,,316,301,306,318,317,321,300,313,,,314,,,312,,,,,,,312,,"320, 303, 101, 316, 301, 306, 318, 317, 321, 300, 313, 314, 312, 312"
 17:20-18:50,,,,,,,,,,,,,Software Project (Prs.)*,,Software Project (Prs.)*,,,,Reserve for elective courses,,,,,,Reserve for elective courses,,,,,,,,,,
 ,,,,,,,,,,,,,Alexandr Borisov,,Pavel Kolychev,,,,,,,,,,,,,,,,,,,,
@@ -49,15 +49,15 @@ WEDNESDAY,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 10:35-12:05,Introduction to Programming 2 (Lec),,,,,,,,,,,,Probability and Statistics (Lec),,,,,,,,,,,,,,,,,,Advanced statistics (*),,Advanced robotics (Lab),,
-,Eugene Zuev,,,,,,,,,,,,Sergey Gorodetskiy,,,,,,,,,,,,,,,,,,Giancarlo Succi,,"Simeon Nedelchev / Mikhail Ostanin",,
+,Eugene Zuev,,,,,,,,,,,,Sergey Gorodetskiy,,,,,,,,,,,,,,,,,,Giancarlo Succi,,Simeon Nedelchev / Mikhail Ostanin,,
 ,108,,,,,,,,,,,,105,,,,,,,,,,,,,,,,,,321,,318,,"108, 105, 321, 318"
 12:10-13:40,Introduction to Programming 2 (tutorial),,,,,,,,,,,,Probability and Statistics (tutorial),,,,,,Data Mining (Lec) ,,Lean Software Development (Lec)  ,,,Sensors and Sensing (Lec),,,,,,,Advanced statistics (Lab),,,,
-,Ivan Konyukhov,,,,,,,,,,,,Sergey Gorodetskiy,,,,,,Leonid Merkin,,Giancarlo Succi      ,,,Ilya Afanasyev,,,,,,,Mohammad Bahrami,,,,
+,Ivan Konyukhov,,,,,,,,,,,,Sergey Gorodetskiy,,,,,,Leonid Merkin,,Giancarlo Succi,,,Ilya Afanasyev,,,,,,,Mohammad Bahrami,,,,
 ,108,,,,,,,,,,,,105,,,,,,106,,313,,,317,,,,,,,321,,,,"108, 105, 106, 313, 317, 321"
-14:10-15:40,Introduction to Programming 2 (Lab),,,,Introduction to Programming 2 (Lab),,,,Introduction to Programming 2 (Lab),,,,Data Modeling and Databases 2 (Lab),Probability and Statistics (Lab),Data Modeling and Databases 2 (Lab),Probability and Statistics (Lab),Data Modeling and Databases 2 (Lab),Probability and Statistics (Lab),Data Mining  (Lab),,Software Systems Design (Lab),,,Sensors and Sensing (Lab),,,,,,,,,,,
+14:10-15:40,Introduction to Programming 2 (Lab),,,,Introduction to Programming 2 (Lab),,,,Introduction to Programming 2 (Lab),,,,Data Modeling and Databases 2 (Lab),Probability and Statistics (Lab),Data Modeling and Databases 2 (Lab),Probability and Statistics (Lab),Data Modeling and Databases 2 (Lab),Probability and Statistics (Lab),Data Mining (Lab),,Software Systems Design (Lab),,,Sensors and Sensing (Lab),,,,,,,,,,,
 ,Anastasia Puzankova,,,,Marat Mingazov,,,,Ivan Konyukhov,,,,Hamza Salem,Pavel Khakimov,Anton Tarasov,Joseph Lamptey,Nikita Bogomazov,Alexey Shikulin,Ivan Grebenkin,,Sirojiddin Komolov,,,Geesara Prathap Kulathunga,,,,,,,,,,,
 ,101,,,,318,,,,312,,,,316,320,314,306,303,317,313,,321,,,301,,,,,,,,,,,"101, 318, 312, 316, 320, 314, 306, 303, 317, 313, 321, 301"
-15:45-17:15,,,Introduction to Programming 2 (Lab),,,,Introduction to Programming 2 (Lab),,,,Introduction to Programming 2 (Lab),,Probability and Statistics (Lab),Data Modeling and Databases 2 (Lab),Probability and Statistics (Lab),Data Modeling and Databases 2 (Lab),Probability and Statistics (Lab),Data Modeling and Databases 2 (Lab),,Data Mining  (Lab),,Software Systems Design (Lab),,,,,,,,,,,,,
+15:45-17:15,,,Introduction to Programming 2 (Lab),,,,Introduction to Programming 2 (Lab),,,,Introduction to Programming 2 (Lab),,Probability and Statistics (Lab),Data Modeling and Databases 2 (Lab),Probability and Statistics (Lab),Data Modeling and Databases 2 (Lab),Probability and Statistics (Lab),Data Modeling and Databases 2 (Lab),,Data Mining (Lab),,Software Systems Design (Lab),,,,,,,,,,,,,
 ,,,Anastasia Puzankova,,,,Marat Mingazov,,,,Ivan Konyukhov,,Pavel Khakimov,Hamza Salem,Joseph Lamptey,Anton Tarasov,Alexey Shikulin,Nikita Bogomazov,,Ivan Grebenkin,,Sirojiddin Komolov,,,,,,,,,,,,,
 ,,,101,,,,318,,,,312,,320,316,306,314,317,303,,313,,321,,,,,,,,,,,,,"101, 318, 312, 320, 316, 306, 314, 317, 303, 313, 321"
 17:20-18:50,,,,,,,,,,,,,,,,,,,Reserve for elective courses,,,,,,Reserve for elective courses,,,,,,"
@@ -71,17 +71,17 @@ THURSDAY,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 09:00-10:30,Theoretical Computer Science (Lec),,,,,,,,,,,,,,,,,,Reserve for elective courses,,,,,,Reserve for elective courses,,,,,,,,,,
 ,Manuel Mazzara,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,108,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,108
-10:35-12:05,Theoretical Computer Science (tut.),,,,,,,,,,,,Networks (Lec),,,,,,Game theory (lec),,,,,Mechanics and Machines (Lec),,,,,"Analysis of software artifacts",,,,,,
-,Daniel De Carvalho,,,,,,,,,,,,Rasheed Hussain,,,,,,Joseph Brown,,,,,Alexandr Maloletov     ,,,,,Andrey Sadovykh,,,,,,
+10:35-12:05,Theoretical Computer Science (tut.),,,,,,,,,,,,Networks (Lec),,,,,,Game theory (lec),,,,,Mechanics and Machines (Lec),,,,,Analysis of software artifacts,,,,,,
+,Daniel De Carvalho,,,,,,,,,,,,Rasheed Hussain,,,,,,Joseph Brown,,,,,Alexandr Maloletov,,,,,Andrey Sadovykh,,,,,,
 ,108,,,,,,,,,,,,105,,,,,,106,,,,,318,,,,,313,,,,,,"108, 105, 106, 318, 313"
 12:10-13:40,English (1),,English (3),English (4),,,,,,,,,Networks (tutorial),,,,,,Game theory (Lab),,Game theory (Lab),Lean Software Development (Lab),Game theory (Lab),Mechanics and Machines (Lab),,,,,,,,,,,
 ,Rabab Marouf,,Georgy Gelvanovsky,Guzel Fazlyeva,,,,,,,,,Artem Burmyakov / Vadim Rashitov,,,,,,Munir Makhmutov,,Manuel Rodriguez,Ilya Khomyakov,Nikita Bogomazov,Oleg Bulichev,,,,,,,,,,,
 ,101,,102,104,,,,,,,,,105,,,,,,316,,312,303,314,318,,,,,,,,,,,"101, 102, 104, 105, 316, 312, 303, 314, 318"
 14:10-15:40,Theoretical Computer Science (Lab),,,,English (5),,Theoretical Computer Science (Lab),,Theoretical Computer Science (Lab),,English (11),English (12),Networks (Lab),,Networks (Lab),,Networks (Lab),,,Game theory (Lab),Lean Software Development (Lab),Game theory (Lab),,Mechatronics (Lec),Mobile Development (Lec),Mechatronics (Lec),,,Architectures of software systems (Lec),,,,,,
-,Swati Megha,,,,Rabab Marouf,,Mansur Khazeev,,Naumcheva Mariya,,Georgy Gelvanovsky,Guzel Fazlyeva,Vadim Rashitov,,Marat Mingazov,,Pal Sourabh,,,Munir Makhmutov,Ilya Khomyakov,Manuel Rodriguez,,"Igor Gaponov",Alexander Simonenko,"Igor Gaponov",,,Artem Kruglov / Mohamad Kassab,,,,,,
+,Swati Megha,,,,Rabab Marouf,,Mansur Khazeev,,Naumcheva Mariya,,Georgy Gelvanovsky,Guzel Fazlyeva,Vadim Rashitov,,Marat Mingazov,,Pal Sourabh,,,Munir Makhmutov,Ilya Khomyakov,Manuel Rodriguez,,Igor Gaponov,Alexander Simonenko,Igor Gaponov,,,Artem Kruglov / Mohamad Kassab,,,,,,
 ,314,,,,101,,318,,312,,102,104,317,,301,,320,,,316,303,321,,306,313,306,,,300,,,,,,"314, 101, 318, 312, 102, 104, 317, 301, 320, 316, 303, 321, 306, 313, 306, 300"
 15:45-17:15,,,Theoretical Computer Science (Lab),,Theoretical Computer Science (Lab),,English (7),,English (9),English (10),Theoretical Computer Science (Lab),,,Networks (Lab.),,Networks (Lab),,Networks (Lab),,,,,,Mechatronics (Lab),Mobile Development (Lab),Mechatronics (Lab),,,Architectures of software systems (30.01; 06.02; 27.02; 09.04),,,,,,
-,,,Swati Megha,,Mansur Khazeev,,Rabab Marouf,,Georgy Gelvanovsky,Guzel Fazlyeva,Naumcheva Mariya,,,Vadim Rashitov,,Marat Mingazov,,Pal Sourabh,,,,,,Stanislav Mikhel  ,Alexander Simonenko,Stanislav Mikhel  ,,,Mohamad Kassab,,,,,,
+,,,Swati Megha,,Mansur Khazeev,,Rabab Marouf,,Georgy Gelvanovsky,Guzel Fazlyeva,Naumcheva Mariya,,,Vadim Rashitov,,Marat Mingazov,,Pal Sourabh,,,,,,Stanislav Mikhel,Alexander Simonenko,Stanislav Mikhel,,,Mohamad Kassab,,,,,,
 ,,,314,,318,,101,,102,104,312,,,317,,301,,320,,,,,,306,313,306,,,300,,,,,,"314, 318, 101, 102, 104, 312, 317, 301, 320, 306, 313, 306, 300"
 17:20-18:50,,,,,,,,,,,,,,,,,,,Project (DS/ SE/ R/ SBC) [if announced],,,,,,Philosophy,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,Rustam Gafarov  / Albina Khusainova  / Mansur Khazeev / Oleg Bulichev / Kirill Saltanov,,,,,,Farida Nezhmetdinova,,,,,,,,,,

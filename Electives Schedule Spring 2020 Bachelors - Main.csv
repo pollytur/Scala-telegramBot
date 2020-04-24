@@ -1,4 +1,4 @@
-F,Weekday,Booked aud by core courses,Time,Natural Language Processing and Machine Learning,Computer Graphics in Game Development,Advanced agile software design,Modern Application Production,Design Patterns,"Economics of Entrepreneurship in IT Industry",Enterprise programming on Javascript - Advanced,Total Virtualization,Product's highly loaded architecture,DevOps,Human Computer Interaction Design for AI,Technical Writing and Communication,Introduction to  Public Speaking for IT-specialist,Advanced Topics in Software Testing,Critical Thinking for IT-specialist,Reading Skills  for IT-specialist,Introduction to IT Entrepreneurship,Programming Windows Services with C++ ,"Advanced Academic Research, Writing and Performance ",Volunteer and Crowd-based Approaches in Computing,Design Fiction,Tech Startup Design,Business-track,Personal Efficiency Skills of IT-specialist,Programming in Haskell,Consensus theory and concurrent programming on a shared memory,Functional Programming and Scala Language,Practical Artificial Intelligence,Introduction to Career Development for IT-specialist,Mobile development using QT,Psychology of IT-specialist,Russian as a foreign language,Software Requirements and Specifications,,,,,,
+F,Weekday,Booked aud by core courses,Time,Natural Language Processing and Machine Learning,Computer Graphics in Game Development,Advanced agile software design,Modern Application Production,Design Patterns,Economics of Entrepreneurship in IT Industry,Enterprise programming on Javascript - Advanced,Total Virtualization,Product's highly loaded architecture,DevOps,Human Computer Interaction Design for AI,Technical Writing and Communication,Introduction to  Public Speaking for IT-specialist,Advanced Topics in Software Testing,Critical Thinking for IT-specialist,Reading Skills  for IT-specialist,Introduction to IT Entrepreneurship,Programming Windows Services with C++,Advanced Academic Research- Writing and Performance,Volunteer and Crowd-based Approaches in Computing,Design Fiction,Tech Startup Design,Business-track,Personal Efficiency Skills of IT-specialist,Programming in Haskell,Consensus theory and concurrent programming on a shared memory,Functional Programming and Scala Language,Practical Artificial Intelligence,Introduction to Career Development for IT-specialist,Mobile development using QT,Psychology of IT-specialist,Russian as a foreign language,Software Requirements and Specifications,,,,,,
 20/01/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
 103",,,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
@@ -15,7 +15,7 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-21/01/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/01/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -31,11 +31,9 @@ Nikolay Kudasov
 Nikolay Kudasov
 101",,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-22/01/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+22/01/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
-102",,,,,,,,,"Russian as a foreign language
-(Advanced)
-(8:00 - 9:30)
+102",,,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 305",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -53,7 +51,7 @@ Eleonora Ilina
 102",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-23/01/2020,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+23/01/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
 102",,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
@@ -70,8 +68,7 @@ Alfredo Capozucca
 103",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,17:20-18:50,,,,,,,,,,"DevOps
 Alfredo Capozucca
-103",,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Beginners)
+103",,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 305",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,"DevOps
@@ -102,7 +99,7 @@ Sebastian Denef
 101",,,,,,"Introduction to IT-Entrepreneurship
 Alexander Semenov
 314","Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 317",,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 104","Design Fiction
@@ -121,7 +118,7 @@ Alfredo Capozucca
 103",,,,,,,"Introduction to IT-Entrepreneurship
 Alexander Semenov
 314","Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 317",,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 104","Design Fiction
@@ -137,20 +134,19 @@ Ivan Belyavtsev
 Konstantin Arkhipov
 102","DevOps
 Alfredo Capozucca
-103",,,,,,,,,"Advanced Academic Research, Writing and Performance 
+103",,,,,,,,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
 317",,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
 314",,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,"Product's highly loaded architecture
 Konstantin Arkhipov
-102",,,,,,,,,,"Advanced Academic Research, Writing and Performance
+102",,,,,,,,,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
 317",,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
 314",,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Advanced)
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 305",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -177,7 +173,7 @@ Sergey Kladko
 102",,"Introduction to IT-Entrepreneurship
 Alexander Semenov
 314","Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 306",,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 104","Design Fiction
@@ -196,7 +192,7 @@ Sergey Kladko
 102",,"Introduction to IT-Entrepreneurship
 Alexander Semenov
 314","Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 306",,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 104","Design Fiction
@@ -210,7 +206,7 @@ Ivan Belyavtsev
 Sebastian Denef
 101",,,,,"Reading Skills  for IT-specialist
 Sergey Kladko
-102",,,"Advanced Academic Research, Writing and Performance 
+102",,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
 306",,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,"Reading Skills  for IT-specialist
@@ -219,11 +215,9 @@ Sergey Kladko
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-27/01/2020,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+27/01/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Yuliya Krasylnykova
-103",,,,,,,,,"Russian as a foreign language
-(Beginners)
-(8:00 - 9:30)
+103",,,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -237,7 +231,7 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-28/01/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+28/01/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -253,10 +247,9 @@ Nikolay Kudasov
 Nikolay Kudasov
 101",,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-29/01/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+29/01/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Yuliya Krasylnykova
-102",,,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+102",,,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -276,7 +269,7 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-30/01/2020,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+30/01/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
 102",,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
@@ -287,13 +280,12 @@ Iouri Kotorov
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Beginners)
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-31/01/2020 (Friday),,,09:00-10:30,,,"Advanced agile software design
+31/01/2020 ,Friday,,09:00-10:30,,,"Advanced agile software design
 Paolo Ciancarini
 312",,,,,,,,,,,,,,,,,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
@@ -324,25 +316,26 @@ Paolo Ciancarini
 Konstantin Arkhipov
 102",,,,,"Advanced topics in Software Testing
 Mohamad Kassab
-103",,,,,,,,,,,,,,,,"Mobile development with QT          Kirill Chuvilin
+103",,,,,,,,,,,,,,,,"Mobile development with QT
+Kirill Chuvilin
 314",,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,"Product's highly loaded architecture
 Konstantin Arkhipov
 102",,,,,"Advanced topics in Software Testing
 Mohamad Kassab
-103",,,,,,,,,,,,,,,,"Mobile development with QT         Kirill Chuvilin
+103",,,,,,,,,,,,,,,,"Mobile development with QT
+Kirill Chuvilin
 314",,,,,,,,,
 ,,,17:20-18:50,,,,,,,,,,,,,,"Advanced topics in Software Testing
 Mohamad Kassab
 103",,,,,,,,,,,,,,,,"Mobile development with QT
 Kirill Chuvilin
-314",,"Russian as a foreign language
-(Advanced)
+314",,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-01/02/2020,Saturday,,09:00-10:30,,,"Advanced agile software design
+01/02/2020 ,Saturday,,09:00-10:30,,,"Advanced agile software design
 Paolo Ciancarini
 312",,,,"Enterprise programming on Javascript - Advanced
 Andrey Vlasov
@@ -376,10 +369,9 @@ Mohamad Kassab
 103",,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-03/02/2020,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+03/02/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
-103",,,,,,,,,"Russian as a foreign language(Beginners)
-(8:00 - 9:30)
+103",,,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -395,7 +387,7 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-04/02/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+04/02/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -411,10 +403,9 @@ Nikolay Kudasov
 Nikolay Kudasov
 313",,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-05/02/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+05/02/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Hannes Hofstadler
-102",,,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+102",,,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -423,8 +414,7 @@ Hannes Hofstadler
 Alexander Tormasov
 313",,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,"Business-track
-Hannes Hofstadler
-Iouri Kotorov
+Hannes Hofstadler/Iouri Kotorov
 102",,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -435,7 +425,7 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-06/02/2020 Tuesday,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+06/02/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Hannes Hofstadler
 102",,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
@@ -446,13 +436,12 @@ Hannes Hofstadler
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Beginners)
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-07/02/2020 (Friday),,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+07/02/2020 ,Friday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Hannes Hofstadler
 102",,,,,"Practical Artificial Intelligence
 Stanislav Protasov
@@ -460,7 +449,7 @@ Stanislav Protasov
 ,,,10:35-12:05,,,,,,,,,,,,,,"Advanced topics in Software Testing
 Mohamad Kassab
 301",,,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 317",,,"Design Fiction
 Olga Ignatieva
 303",,"Business-track
@@ -473,7 +462,7 @@ Anna Melekhova
 307",,,,,,"Advanced topics in Software Testing
 Mohamad Kassab
 301",,,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 317",,,"Design Fiction
 Olga Ignatieva
 303",,,,,,,,,,,,,,,,,,
@@ -483,7 +472,7 @@ Anna Melekhova
 Konstantin Arkhipov
 102",,,,,"Advanced topics in Software Testing
 Mohamad Kassab
-301",,,,,"Advanced Academic Research, Writing and Performance
+301",,,,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
 317",,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
@@ -494,20 +483,19 @@ Anna Melekhova
 Konstantin Arkhipov
 102",,,,,"Advanced topics in Software Testing
 Mohamad Kassab
-301",,,,,"Advanced Academic Research, Writing and Performance
+301",,,,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
 317",,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
 104",,,,,,,,,
 ,,,17:20-18:50,,,,,,,,"Total Virtualization
 Anna Melekhova
-307",,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Advanced)
+307",,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-08/02/2020 (Saturday),,,09:00-10:30,,,,,,,"Enterprise programming on Javascript - Advanced
+08/02/2020 ,Saturday,,09:00-10:30,,,,,,,"Enterprise programming on Javascript - Advanced
 Andrey Vlasov
 303","Total Virtualization
 Anna Melekhova
@@ -521,7 +509,7 @@ Anna Melekhova
 312",,,,,,,"Critical Thinking for IT-specialist
 Sergey Kladko
 102",,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 306",,,"Design Fiction
 Olga Ignatieva
 316","Tech Startup Design
@@ -534,7 +522,7 @@ Mohamad Kassab
 101","Critical Thinking for IT-specialist
 Sergey Kladko
 102",,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 306",,,"Design Fiction
 Olga Ignatieva
 316","Tech Startup Design
@@ -546,7 +534,7 @@ Anna Melekhova
 Mohamad Kassab
 101",,"Reading Skills  for IT-specialist
 Sergey Kladko
-102",,,"Advanced Academic Research, Writing and Performance 
+102",,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
 306",,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,"Advanced topics in Software Testing
@@ -559,10 +547,9 @@ Mohamad Kassab
 101",,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-10/02/2020,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+10/02/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Jaroslav Demel
-103",,,,,,,,,"Russian as a foreign language(Beginners)
-(8:00 - 9:30)
+103",,,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -576,7 +563,7 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-11/02/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11/02/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -592,10 +579,9 @@ Nikolay Kudasov
 Nikolay Kudasov
 313",,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-12/02/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+12/02/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Jaroslav Demel
-102",,,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+102",,,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -604,12 +590,10 @@ Jaroslav Demel
 Alexander Tormasov
 313",,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,"Business-track
-Jaroslav Demel
-Iouri Kotorov
+Jaroslav Demel/Iouri Kotorov
 102",,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,"Business-track
-Jaroslav Demel
-Iouri Kotorov
+Jaroslav Demel/Iouri Kotorov
 102",,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,"Consensus theory and concurrent programming on a shared memory (Lab)
@@ -619,7 +603,7 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-13/02/2020,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+13/02/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Jaroslav Demel
 102",,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
@@ -630,13 +614,12 @@ Jaroslav Demel
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Beginners)
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-14/02/2020 (Friday),,,09:00-10:30,,,"Advanced agile software design
+14/02/2020 ,Friday,,09:00-10:30,,,"Advanced agile software design
 Paolo Ciancarini
 312",,,,,,,,,,,,,,,,,,,,"Business-track
 Alexander Semenov
@@ -665,13 +648,12 @@ Konstantin Arkhipov
 102",,,,,,,,,,,,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
 104",,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Advanced)
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-15/02/2020 (Saturday),,,09:00-10:30,,,"Advanced agile software design
+15/02/2020 ,Saturday,,09:00-10:30,,,"Advanced agile software design
 Paolo Ciancarini
 312",,,,"Enterprise programming on Javascript - Advanced
 Andrey Vlasov
@@ -697,13 +679,12 @@ Paolo Ciancarini
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-17/02/2020,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track 
+17/02/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Wim Rietberg
-316",,,,,,,,,"Russian as a foreign language(Beginners)
-(8:00 - 9:30)
+316",,,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
-,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track 
+,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Wim Rietberg
 316",,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -714,14 +695,14 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-18/02/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+18/02/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,"Business-track 
+,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Wim Rietberg
 102",,,,,,,,,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,"Business-track 
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Wim Rietberg
 102",,"Programming in Haskell
 Nikolay Kudasov
@@ -734,10 +715,9 @@ Nikolay Kudasov
 Aliya Samatova
 104",,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-19/02/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,"Personal Efficiency Skills of IT-specialist
+19/02/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,"Personal Efficiency Skills of IT-specialist
 Evgeny Serochudinov
-314",,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+314",,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,"Personal Efficiency Skills of IT-specialist
@@ -755,26 +735,25 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-20/02/2020,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track 
+20/02/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Rob van de Star
 102",,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
 101",,,,,,,,,,,,
-,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track 
+,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Rob van de Star
 102",,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Beginners)
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-21/02/2020 (Friday),,,09:00-10:30,,"Computer Graphics in Game Development
+21/02/2020 , Friday,,09:00-10:30,,"Computer Graphics in Game Development
 Ivan Belyavtsev
-312",,,,,,,,,,,,,,,,,,,,,"Business-track 
+312",,,,,,,,,,,,,,,,,,,,,"Business-track
 Rob van de Star
 102",,,,,"Practical Artificial Intelligence
 Stanislav Protasov
@@ -784,8 +763,8 @@ Ivan Belyavtsev
 312",,,,,,,,,,"Technical Writing and Communication
 Benjamin Araud
 104",,,,,,"Programming Windows Services with C++
-Alexey Kostyushko 
-317",,,,,"Business-track 
+Alexey Kostyushko
+317",,,,,"Business-track
 Rob van de Star
 102",,,,,"Practical Artificial Intelligence
 Stanislav Protasov
@@ -795,7 +774,7 @@ Ivan Belyavtsev
 312",,,,,,,,,,"Technical Writing and Communication
 Benjamin Araud
 104",,,,,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 317",,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,"Computer Graphics in Game Development
 Ivan Belyavtsev
@@ -823,13 +802,12 @@ Sveta Burikova
 104",,,,,,,,,
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,"Introduction to IT-Entrepreneurship
 Alexander Semenov
-314",,,,,,,,,,,,,,,"Russian as a foreign language
-(Advanced)
+314",,,,,,,,,,,,,,,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-22/02/2020 (Saturday),,,09:00-10:30,,"Computer Graphics in Game Development
+22/02/2020 ,Saturday,,09:00-10:30,,"Computer Graphics in Game Development
 Ivan Belyavtsev
 101",,,,,"Enterprise programming on Javascript - Advanced
 Andrey Vlasov
@@ -861,22 +839,21 @@ Alexander Semenov
 Benjamin Araud
 104",,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-24/02/2020 (Monday),,,09:00-10:30,"Natural Language Processing and Machine Learning
+24/02/2020 ,Monday,,09:00-10:30,"Natural Language Processing and Machine Learning
 Leon Derczynski
 303",,,,,,,,,,,,,,,,,,,,,,"Business-track
 Yuliya Krasylnykova
-103",,,,,,,,,"Russian as a foreign language(Beginners)
-(8:00 - 9:30)
+103",,,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,"Natural Language Processing and Machine Learning
 Leon Derczynski
-312",,,,,,,,,,,,,,,,,,,,,,"Business-track 
+312",,,,,,,,,,,,,,,,,,,,,,"Business-track
 Yuliya Krasylnykova
 103",,,,,,,,,,,,,,,,
 ,,,12:10-13:40,"Natural Language Processing and Machine Learning
 Leon Derczynski
-312",,,,,,,,,,,,,,,,,,,,,,"Business-track 
+312",,,,,,,,,,,,,,,,,,,,,,"Business-track
 Yuliya Krasylnykova
 103",,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -886,14 +863,14 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-25/02/2020 (Tuesday),,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+25/02/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,"Business-track 
+,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Hannes Hofstadler
 103",,,,,,,,,,,,,,,,
-,,,17:20-18:50,"Natural Language Processing and Machine Learning 
+,,,17:20-18:50,"Natural Language Processing and Machine Learning
 Leon Derczynski
 303",,,,,,,,,,,,,,,,,,,,,,"Business-track
 Hannes Hofstadler
@@ -904,19 +881,18 @@ Nikolay Kudasov
 Nikolay Kudasov
 313",,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-26/02/2020 (Wednesday),,,09:00-10:30,"Natural Language Processing and Machine Learning
+26/02/2020 , Wednesday,,09:00-10:30,"Natural Language Processing and Machine Learning
 Leon Derczynski
-312",,,,,,,,,,,,,,,,,,,,,,"Business-track 
+312",,,,,,,,,,,,,,,,,,,,,,"Business-track
 Hannes Hofstadler
 102","Personal Efficiency Skills of IT-specialist
 Evgeny Serochudinov
-314",,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+314",,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,"Natural Language Processing and Machine Learning
 Leon Derczynski
-312",,,,,,,,,,,,,,,,,,,,,,"Business-track 
+312",,,,,,,,,,,,,,,,,,,,,,"Business-track
 Hannes Hofstadler
 102","Personal Efficiency Skills of IT-specialist
 Evgeny Serochudinov
@@ -933,14 +909,14 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-27/02/2020 (Thursday),,,09:00-10:30,"Natural Language Processing and Machine Learning
+27/02/2020 ,Thursday,,09:00-10:30,"Natural Language Processing and Machine Learning
 Leon Derczynski
-317",,,,,,,,,,,,,,,,,,,,,,"Business-track 
+317",,,,,,,,,,,,,,,,,,,,,,"Business-track
 Hannes Hofstadler
 102",,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
 101",,,,,,,,,,,,
-,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track 
+,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Hannes Hofstadler
 102",,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -952,8 +928,7 @@ Alfredo Capozucca
 103",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,17:20-18:50,,,,,,,,,,"DevOps
 Alfredo Capozucca
-103",,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Beginners)
+103",,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,"DevOps
@@ -962,7 +937,7 @@ Alfredo Capozucca
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Software Requirements and Specifications (Lec)
 Alberto Sillitti
 102",,,,,,
-28/02/2020 (Friday),,,09:00-10:30,,,,,"Design Patterns
+28/02/2020 ,Friday,,09:00-10:30,,,,,"Design Patterns
 Jean-Michel Bruel
 104",,,,,"DevOps
 Alfredo Capozucca
@@ -982,7 +957,7 @@ Jean-Michel Bruel
 104",,,,,"DevOps
 Alfredo Capozucca
 103",,,,,,,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 317",,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 303",,,"Business-track
@@ -1001,12 +976,11 @@ Alfredo Capozucca
 103",,,,"Advanced topics in Software Testing
 Mohamad Kassab
 301",,,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 317",,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 303",,,"Business-track
-Yuliya Krasylnykova
-Hannes Hofstadler, Iouri Kotorov
+Yuliya Krasylnykova /Hannes Hofstadler/ Iouri Kotorov
 102",,,,,,,,,,"Software Requirements and Specifications (Lec)
 Alberto Sillitti
 306",,,,,,
@@ -1042,13 +1016,12 @@ Alberto Sillitti
 Jean-Michel Bruel
 312",,,,,,,,,,"Advanced topics in Software Testing
 Mohamad Kassab
-301",,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Advanced)
+301",,,,,,,,,,,,,,,,,,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-29/02/2020 (Saturday),,,09:00-10:30,,,,,"Design Patterns
+29/02/2020 ,Saturday,,09:00-10:30,,,,,"Design Patterns
 Jean-Michel Bruel
 104",,"Enterprise programming on Javascript - Advanced
 Andrey Vlasov
@@ -1066,7 +1039,7 @@ Alfredo Capozucca
 103",,,,,"Critical Thinking  for IT-specialist
 Sergey Kladko
 301",,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 306",,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 102",,,,,,,,,,,,,"Software Requirements and Specifications (Lec)
@@ -1081,7 +1054,7 @@ Mohamad Kassab
 101","Critical Thinking  for IT-specialist
 Sergey Kladko
 301",,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 306",,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 102",,,,,,,,,,,,,"Software Requirements and Specifications (Lec)
@@ -1093,7 +1066,7 @@ Jean-Michel Bruel
 Mohamad Kassab
 101",,"Reading Skills  for IT-specialist
 Sergey Kladko
-102",,,"Advanced Academic Research, Writing and Performance 
+102",,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
 306",,,,,,,,,,,,,,"Software Requirements and Specifications (Lab)
 Alberto Sillitti
@@ -1114,10 +1087,9 @@ Mohamad Kassab
 101",,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-02/03/2020,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+02/03/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Ari Stenroos
-103",,,,,,,,,"Russian as a foreign language(Beginners)
-(8:00 - 9:30)
+103",,,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -1131,7 +1103,7 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-03/03/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+03/03/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,"Consensus theory and concurrent programming on a shared memory (Lec)
 Alexander Tormasov
 312",,,,,,,,,,,,,
@@ -1155,8 +1127,7 @@ Nikolay Kudasov
 Aliya Samatova
 104",,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-04/03/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+04/03/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,"Consensus theory and concurrent programming on a shared memory (Lec)
@@ -1172,7 +1143,7 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-05/03/2020,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+05/03/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Ari Stenroos
 103",,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
@@ -1183,13 +1154,12 @@ Ari Stenroos
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Beginners)
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-06/03/2020,Friday,,09:00-10:30,,,"Advanced agile software design
+06/03/2020 ,Friday,,09:00-10:30,,,"Advanced agile software design
 Paolo Ciancarini
 312",,,,,,,,"Human Computer Interaction Design for AI
 Sebastian Denef
@@ -1224,9 +1194,7 @@ Olga Ignatieva
 103","Tech Startup Design
 Tatiana Bobrus
 301","Business-track
-Ari Stenroos
-Iouri Kotorov
-Yuliya Krasylnykova
+Ari Stenroos /Iouri Kotorov /Yuliya Krasylnykova
 102",,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,"Advanced agile software design
 Paolo Ciancarini
@@ -1239,10 +1207,8 @@ Sebastian Denef
 314",,,,,,,,,,"Design Fiction
 Olga Ignatieva
 421",,"Business-track
-Ari Stenroos
-Iouri Kotorov
-Yuliya Krasylnykova
-102",,,,,,,"Mobile development with QT    
+Ari Stenroos /Iouri Kotorov /Yuliya Krasylnykova
+102",,,,,,,"Mobile development with QT
 Sveta Burikova
 306",,,,,,,,,
 ,,,15:45-17:15,,,,,,"Economics of Entrepreneurship in IT industry
@@ -1254,15 +1220,14 @@ Sveta Burikova
 306",,,,,,,,,
 ,,,17:20-18:50,,,,,,"Economics of Entrepreneurship in IT industry
 Hein Roelfsema
-103",,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Advanced)
+103",,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,"Economics of Entrepreneurship in IT industry
 Hein Roelfsema
 103",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-07/03/2020,Saturday,,09:00-10:30,,,"Advanced agile software design
+07/03/2020 ,Saturday,,09:00-10:30,,,"Advanced agile software design
 Paolo Ciancarini
 312",,,,"Enterprise programming on Javascript - Advanced
 Andrey Vlasov
@@ -1316,10 +1281,9 @@ Hein Roelfsema
 Hein Roelfsema
 103",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-09/03/2020,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+09/03/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
-103",,,,,,,,,"Russian as a foreign language(Beginners)
-(8:00 - 9:30)
+103",,,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -1333,7 +1297,7 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-10/03/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+10/03/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1349,10 +1313,9 @@ Nikolay Kudasov
 Nikolay Kudasov
 313",,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-11/03/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+11/03/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
-102",,,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+102",,,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -1370,7 +1333,7 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-12/03/2020,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+12/03/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
 102",,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
@@ -1381,8 +1344,7 @@ Iouri Kotorov
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Beginners)
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1422,15 +1384,14 @@ Kirill Chuvilin
 Jean-Michel Bruel
 103",,"Economics of Entrepreneurship in IT industry
 Hein Roelfsema
-312",,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Advanced)
+312",,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,"Economics of Entrepreneurship in IT industry
 Hein Roelfsema
 312",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-14/03/2020 (Saturday),,,09:00-10:30,,,,,"Design Patterns
+14/03/2020 ,Saturday,,09:00-10:30,,,,,"Design Patterns
 Jean-Michel Bruel
 103",,"Enterprise programming on Javascript - Advanced
 Andrey Vlasov
@@ -1468,14 +1429,13 @@ Alexander Semenov
 314",,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-16/03/2020 (Monday),,,09:00-10:30,"Natural Language Processing and Machine Learning
+16/03/2020 ,Monday,,09:00-10:30,"Natural Language Processing and Machine Learning
 Leon Derczynski
 312",,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
 104","Personal Efficiency Skills
 Evgeniy Serochudinov
-316",,,,,,,,"Russian as a foreign language(Beginners)
-(8:00 - 9:30)
+316",,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,"Natural Language Processing and Machine Learning
@@ -1497,7 +1457,7 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-17/03/2020 (Tuesday),,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17/03/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1511,12 +1471,11 @@ Nikolay Kudasov
 Nikolay Kudasov
 313",,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-18/03/2020 (Wednesday),,,09:00-10:30,"Natural Language Processing and Machine Learning
+18/03/2020 ,Wednesday,,09:00-10:30,"Natural Language Processing and Machine Learning
 Leon Derczynski
 103",,,,,,,,,,,,,,,,,,,,,,"Business-track
 Yuliya Krasylnykova
-102",,,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+102",,,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,"Natural Language Processing and Machine Learning
@@ -1527,8 +1486,7 @@ Yuliya Krasylnykova
 Alexander Tormasov
 313",,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,"Business-track
-Iouri Kotorov
-Yuliya Krasylnykova
+Iouri Kotorov /Yuliya Krasylnykova
 102",,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1539,7 +1497,7 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-19/03/2020 (Thursday),,,09:00-10:30,"Natural Language Processing and Machine Learning
+19/03/2020 ,Thursday,,09:00-10:30,"Natural Language Processing and Machine Learning
 Leon Derczynski
 103",,,,,,,,,,,,,,,,,,,,,,,,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
@@ -1550,13 +1508,12 @@ Eugene Zuev
 ,,,15:45-17:15,"Natural Language Processing and Machine Learning
 Leon Derczynski
 103",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Beginners)
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-20/03/2020 (Friday),,,09:00-10:30,,"Computer Graphics in Game Development
+20/03/2020 ,Friday,,09:00-10:30,,"Computer Graphics in Game Development
 Ivan Belyavtsev
 312",,,,,,,,,,,,,,,,,,,,,,,,,,"Practical Artificial Intelligence
 Stanislav Protasov
@@ -1581,27 +1538,26 @@ Ivan Belyavtsev
 Konstantin Arkhipov
 102",,,,"Introduction to Public Speaking for IT-specialist
 Benjamin Araud
-103",,,,,,,,,,,,,,,,,"Mobile development with QT          
+103",,,,,,,,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
 104",,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,"Product's highly loaded architecture
 Konstantin Arkhipov
 102",,,"Technical Writing and Communication
 Benjamin Araud
-103",,,,,,,,,,,,,,,,,,"Mobile development with QT          
+103",,,,,,,,,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
 104",,,,,,,,,
 ,,,17:20-18:50,,,,,,,,,,,,"Technical Writing and Communication
 Benjamin Araud
-103",,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Advanced)
+103",,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,"Total Virtualization
 Anna Melekhova
 000",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-21/03/2020 (Saturday),,,09:00-10:30,,"Computer Graphics in Game Development
+21/03/2020 ,Saturday,,09:00-10:30,,"Computer Graphics in Game Development
 Ivan Belyavtsev
 312",,,,,"Enterprise programming on Javascript - Advanced
 Andrey Vlasov
@@ -1641,12 +1597,11 @@ Benjamin Araud
 103",,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-23/03/2020,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+23/03/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Jaroslav Demel
 103","Personal Efficiency Skills
 Evgeniy Serochudinov
-316",,,,,,,,"Russian as a foreign language (Beginners)
-(8:00 - 9:30)
+316",,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -1655,12 +1610,10 @@ Jaroslav Demel
 Evgeniy Serochudinov
 316",,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,"Business-track
-Jaroslav Demel
-Iouri Kotorov
+Jaroslav Demel/ Iouri Kotorov
 103",,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,"Business-track
-Jaroslav Demel
-Iouri Kotorov
+Jaroslav Demel/ Iouri Kotorov
 103",,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,"Functional Programming and Scala Language (Lab)
@@ -1670,7 +1623,7 @@ Eugene Zuev
 Anna Melekhova
 104",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-24/03/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+24/03/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1688,10 +1641,9 @@ Anna Melekhova
 Nikolay Kudasov
 313",,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-25/03/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,"Personal Efficiency Skills of IT-specialist
+25/03/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,"Personal Efficiency Skills of IT-specialist
 Evgeny Serochudinov
-314",,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+314",,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,"Personal Efficiency Skills of IT-specialist
@@ -1705,7 +1657,7 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-26/03/2020,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,"Functional Programming and Scala Language (Lec)
+26/03/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
 101",,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,"Consensus theory and concurrent programming on a shared memory (Lec)
@@ -1716,15 +1668,14 @@ Alexander Tormasov
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,"Consensus theory and concurrent programming on a shared memory (Lab)
 Artem Burmyakov
-314",,,,,,"Russian as a foreign language
-(Beginners)
+314",,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Software Requirements and Specifications (Lec)
 Alberto Sillitti
 321",,,,,,
-27/03/2020 (Friday),,,09:00-10:30,,,,,"Design Patterns
+27/03/2020 ,Friday,,09:00-10:30,,,,,"Design Patterns
 Jean-Michel Bruel
 321",,,,,,"Human Computer Interaction Design for AI
 Sebastian Denef
@@ -1779,8 +1730,7 @@ Alberto Sillitti
 103",,,,,,
 ,,,17:20-18:50,,,,"Modern Application Production
 Jean-Michel Bruel
-321",,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Advanced)
+321",,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,"Total Virtualization
@@ -1829,8 +1779,7 @@ Jean-Michel Bruel
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 30/03/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
-103",,,,,,,,,"Russian as a foreign language(Beginners)
-(8:00 - 9:30)
+103",,,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -1844,7 +1793,7 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-31/03/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+31/03/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1860,10 +1809,9 @@ Nikolay Kudasov
 Nikolay Kudasov
 313",,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-01/04/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+01/04/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
-102",,,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+102",,,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -1881,20 +1829,19 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-02/04/2020 (Thursday),,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,"Functional Programming and Scala Language (Lec)
+02/04/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
 101",,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Beginners)
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-03/04/2020 (Friday),,,09:00-10:30,,,,,"Design Patterns
+03/04/2020 ,Friday,,09:00-10:30,,,,,"Design Patterns
 Jean-Michel Bruel
 314",,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
@@ -1911,21 +1858,20 @@ Stanislav Protasov
 ,,,12:10-13:40,,,,,"Design Patterns
 Jean-Michel Bruel
 314",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Mobile development with QT          
+,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
 104",,,,,,,,,
-,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Mobile development with QT          
+,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
 104",,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Mobile development with QT          
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
-000",,"Russian as a foreign language
-(Advanced)
+000",,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-04/04/2020 (Saturday),,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+04/04/2020 ,Saturday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,"Modern Application Production
@@ -1939,12 +1885,11 @@ Jean-Michel Bruel
 103",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-06/04/2020 (Monday),,,09:00-10:30,"Natural Language Processing and Machine Learning
+06/04/2020 ,Monday,,09:00-10:30,"Natural Language Processing and Machine Learning
 Leon Derczynski
 312",,,,,,,,,,,,,,,,,,,,,,"Business-track
 Ari Stenroos
-103",,,,,,,,,"Russian as a foreign language(Beginners)
-(8:00 - 9:30)
+103",,,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,"Natural Language Processing and Machine Learning
@@ -1964,7 +1909,7 @@ Eugene Zuev
 Anna Melekhova
 000",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-07/04/2020 (Tuesday),,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+07/04/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -1988,12 +1933,11 @@ Nikolay Kudasov
 Aliya Samatova
 000",,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-08/04/2020 (Wednesday),,,09:00-10:30,"Natural Language Processing and Machine Learning
+08/04/2020 ,Wednesday,,09:00-10:30,"Natural Language Processing and Machine Learning
 Leon Derczynski
 312",,,,,,,,,,,,,,,,,,,,,,"Business-track
 Ari Stenroos
-102",,,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+102",,,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,"Natural Language Processing and Machine Learning
@@ -2015,7 +1959,7 @@ Eleonora Ilina
 Anna Melekhova
 000",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-09/04/2020 (Thursday),,,09:00-10:30,"Natural Language Processing and Machine Learning
+09/04/2020 ,Thursday,,09:00-10:30,"Natural Language Processing and Machine Learning
 Leon Derczynski
 317",,,,,,,,,,,,,,,,,,,,,,"Business-track
 Ari Stenroos
@@ -2032,13 +1976,12 @@ Ari Stenroos
 ,,,15:45-17:15,"Natural Language Processing and Machine Learning
 Leon Derczynski
 316",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Beginners)
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-10/04/2020 (Friday),,,09:00-10:30,,,,,"Design Patterns
+10/04/2020 ,Friday,,09:00-10:30,,,,,"Design Patterns
 Jean-Michel Bruel
 104",,,,,,"Human Computer Interaction Design for AI
 Sebastian Denef
@@ -2047,9 +1990,7 @@ Mohamad Kassab
 103",,,,,,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 000",,,"Business-track
-Ari Stenroos
-Iouri Kotorov
-Yuliya Krasylnykova
+Ari Stenroos /Iouri Kotorov /Yuliya Krasylnykova
 102",,,,,"Practical Artificial Intelligence
 Stanislav Protasov
 101",,,,,,,,,,,
@@ -2062,13 +2003,11 @@ Sebastian Denef
 314",,,"Advanced topics in Software Testing
 Mohamad Kassab
 103",,,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 317",,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 000",,,"Business-track
-Ari Stenroos
-Iouri Kotorov
-Yuliya Krasylnykova
+Ari Stenroos /Iouri Kotorov /Yuliya Krasylnykova
 102",,,,,"Practical Artificial Intelligence
 Stanislav Protasov
 101",,,,,,,,,,,
@@ -2081,13 +2020,11 @@ Sebastian Denef
 314",,"Introduction to  Public Speaking for IT-specialist
 Benjamin Araud
 103",,,,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 317",,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 000",,,"Business-track
-Ari Stenroos
-Iouri Kotorov
-Yuliya Krasylnykova
+Ari Stenroos /Iouri Kotorov /Yuliya Krasylnykova
 102",,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,"Modern Application Production
 Jean-Michel Bruel
@@ -2097,9 +2034,9 @@ Konstantin Arkhipov
 Sebastian Denef
 314",,"Introduction to Public Speaking for IT-specialist
 Benjamin Araud
-103",,,,,,"Advanced Academic Research, Writing and Performance 
+103",,,,,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
-317",,,,,,,,,,,"Mobile development with QT          
+317",,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
 104",,,,,,,,,
 ,,,15:45-17:15,,,,"Modern Application Production
@@ -2108,24 +2045,23 @@ Jean-Michel Bruel
 Konstantin Arkhipov
 102",,,"Technical Writing and Communication
 Benjamin Araud
-103",,,,,,,"Advanced Academic Research, Writing and Performance 
+103",,,,,,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
-317",,,,,,,,,,,"Mobile development with QT          
+317",,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
 104",,,,,,,,,
 ,,,17:20-18:50,,,,"Modern Application Production
 Jean-Michel Bruel
 312",,,,,,,,"Technical Writing and Communication
 Benjamin Araud
-103",,,,,,,,,,,,,,,,,,"Mobile development with QT          
+103",,,,,,,,,,,,,,,,,,"Mobile development with QT
 Sveta Burikova
-000",,"Russian as a foreign language
-(Advanced)
+000",,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-11/04/2020, Saturday,,09:00-10:30,,,,,"Design Patterns
+11/04/2020 , Saturday,,09:00-10:30,,,,,"Design Patterns
 Jean-Michel Bruel
 104",,"Enterprise programming on Javascript - Advanced
 Andrey Vlasov
@@ -2136,7 +2072,7 @@ Mohamad Kassab
 301","Critical Thinking for IT-specialist
 Sergey Kladko
 000",,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 306",,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,"Design Patterns
 Jean-Michel Bruel
@@ -2149,7 +2085,7 @@ Mohamad Kassab
 301","Critical Thinking for IT-specialist
 Sergey Kladko
 103",,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 306",,,,"Tech Startup Design
 Tatiana Bobrus
 000",,,,,,,,,,,,,,,,,
@@ -2164,7 +2100,7 @@ Mohamad Kassab
 301",,"Reading Skills for IT-specialist
 Sergey Kladko
 000",,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 306",,,,"Tech Startup Design
 Tatiana Bobrus
 000",,,,,,,,,,,,,,,,,
@@ -2178,7 +2114,7 @@ Benjamin Araud
 Mohamad Kassab
 301",,"Reading Skills for IT-specialist
 Sergey Kladko
-104",,,"Advanced Academic Research, Writing and Performance 
+104",,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
 306",,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,"Modern Application Production
@@ -2187,7 +2123,7 @@ Jean-Michel Bruel
 Benjamin Araud
 103",,,,"Reading Skills for IT-specialist
 Sergey Kladko
-000",,,"Advanced Academic Research, Writing and Performance
+000",,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
 000",,,,,,,,,,,,,,,,,,,,
 ,,,17:20-18:50,,,,"Modern Application Production
@@ -2195,12 +2131,11 @@ Jean-Michel Bruel
 312",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-13/04/2020,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+13/04/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
 102","Personal Efficiency Skills
 Evgeniy Serochudinov
-000",,,,,,,,"Russian as a foreign language(Beginners)
-(8:00 - 9:30)
+000",,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,"Business-track
@@ -2216,7 +2151,7 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-14/04/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14/04/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2232,14 +2167,14 @@ Nikolay Kudasov
 Aliya Samatova
 104",,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-15/04/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,"Personal Efficiency Skills of IT-specialist
+15/04/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,"Personal Efficiency Skills of IT-specialist
 Evgeny Serochudinov
-314",,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+314 ",,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,"Personal Efficiency Skills of IT-specialist
-Evgeny Serochudinov 000",,"Consensus theory and concurrent programming on a shared memory (Lab)
+Evgeny Serochudinov
+000",,"Consensus theory and concurrent programming on a shared memory (Lab)
 Artem Burmyakov
 313",,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2252,7 +2187,7 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-16/04/2020,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
+16/04/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,"Business-track
 Iouri Kotorov
 102",,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
@@ -2267,8 +2202,7 @@ Alfredo Capozucca
 103",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,17:20-18:50,,,,,,,,,,"DevOps
 Alfredo Capozucca
-103",,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Beginners)
+103",,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,"DevOps
@@ -2284,8 +2218,7 @@ Alfredo Capozucca
 103",,,,,,,,,,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 000",,,"Business-track
-Iouri Kotorov
-Yuliya Krasylnykova
+Iouri Kotorov /Yuliya Krasylnykova
 102",,,,,"Practical Artificial Intelligence
 Stanislav Protasov
 101",,,,,,,,,,,
@@ -2300,8 +2233,7 @@ Alexey Kostyushko
 000",,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 000",,,"Business-track
-Iouri Kotorov
-Yuliya Krasylnykova
+Iouri Kotorov/ Yuliya Krasylnykova
 102",,,,,"Practical Artificial Intelligence
 Stanislav Protasov
 101",,,,,,,,,,,
@@ -2320,8 +2252,7 @@ Alexey Kostyushko
 000",,"Volunteer and Crowd-based Approaches in Computing
 Salvatore Distefano
 000"   ,,,"Business-track
-Iouri Kotorov
-Yuliya Krasylnykova
+Iouri Kotorov /Yuliya Krasylnykova
 102",,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,"Computer Graphics in Game Development
 Ivan Belyavtsev
@@ -2333,7 +2264,7 @@ Konstantin Arkhipov
 Alfredo Capozucca
 000",,"Technical Writing and Communication
 Benjamin Araud
-000",,,,,,,"Advanced Academic Research, Writing and Performance
+000",,,,,,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
 000",,,,,,,,,,,"Mobile development with QT
 Kirill Chuvilin
@@ -2344,7 +2275,7 @@ Anna Melekhova
 Konstantin Arkhipov
 102",,,,"Introduction to Public Speaking for IT-Specialist
 Benjamin Araud
-000",,,,,,"Advanced Academic Research, Writing and Performance
+000",,,,,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
 000",,,,,,,,,,,"Mobile development with QT
 Kirill Chuvilin
@@ -2354,13 +2285,13 @@ Anna Melekhova
 103",,,,,"Introduction to Public Speaking for IT-Specialist
 Benjamin Araud
 000",,,,,,,,,,,,,,,,,"Mobile development with QT
-Kirill Chuvilin 000",,"Russian as a foreign language
-(Advanced)
+Kirill Chuvilin
+000",,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-18/04/2020 (Saturday),,,09:00-10:30,,"Computer Graphics in Game Development
+18/04/2020 ,Saturday,,09:00-10:30,,"Computer Graphics in Game Development
 Ivan Belyavtsev
 312","Advanced agile software design
 Paolo Ciancarini
@@ -2411,7 +2342,7 @@ Anna Melekhova
 Benjamin Araud
 000",,,,"Reading Skills for IT-specialist
 Sergey Kladko
-102",,,"Advanced Academic Research, Writing and Performance 
+102",,,"Advanced Academic Research- Writing and Performance
 Alexey Kosyushko
 000",,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,"Introduction to Public Speaking for IT-Specialist
@@ -2424,8 +2355,7 @@ Benjamin Araud
 000",,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-20/04/2020,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language(Beginners)
-(8:00 - 9:30)
+20/04/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2437,7 +2367,7 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-21/04/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21/04/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2453,10 +2383,9 @@ Nikolay Kudasov
 Aliya Samatova
 000",,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-22/04/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,"Personal Efficiency Skills
+22/04/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,"Personal Efficiency Skills
 Evgeniy Serochudinov
-000",,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+000",,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,"Design Fiction
@@ -2472,7 +2401,7 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-23/04/2020,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,"Functional Programming and Scala Language (Lec)
+23/04/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
 101",,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,"Consensus theory and concurrent programming on a shared memory (Lec)
@@ -2483,18 +2412,17 @@ Alexander Tormasov
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,"Consensus theory and concurrent programming on a shared memory (Lab)
 Artem Burmyakov
-314",,,,,,"Russian as a foreign language
-(Beginners)
+314",,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Software Requirements and Specifications (Lec)
 Alberto Sillitti
 306",,,,,,
-24/04/2020 (Friday),,,09:00-10:30,,,,,"Design Patterns
+24/04/2020 ,Friday,,09:00-10:30,,,,,"Design Patterns
 Jean-Michel Bruel
 104",,,,,,,,,,,,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 314",,,,,,,,,,"Practical Artificial Intelligence
 Stanislav Protasov
 101",,,,,"Software Requirements and Specifications
@@ -2503,7 +2431,7 @@ Alberto Sillitti
 ,,,10:35-12:05,,,,,"Design Patterns
 Jean-Michel Bruel
 104",,,,,,,,,,,,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 314",,,,,,,,,,"Practical Artificial Intelligence
 Stanislav Protasov
 101",,,,,"Software Requirements and Specifications (Lec)
@@ -2512,7 +2440,7 @@ Alberto Sillitti
 ,,,12:10-13:40,,,,,"Design Patterns
 Jean-Michel Bruel
 104",,,,,,,,,,,,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 314",,,,,,,,,,,,,,,"Software Requirements and Specifications (Lab)
 Alberto Sillitti
 306",,,,,,
@@ -2521,7 +2449,7 @@ Jean-Michel Bruel
 312",,,,,"Product's highly loaded architecture
 Konstantin Arkhipov
 102",,,,,,,,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 314",,,,,,,,,,,,,,,"Software Requirements and Specifications (Lab)
 Alberto Sillitti
 306",,,,,,
@@ -2534,20 +2462,19 @@ Alberto Sillitti
 306",,,,,,
 ,,,17:20-18:50,,,,"Modern Application Production
 Jean-Michel Bruel
-312",,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Advanced)
+312",,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-25/04/2020 (Saturday),,,09:00-10:30,,,,,"Design Patterns
+25/04/2020 ,Saturday,,09:00-10:30,,,,,"Design Patterns
 Jean-Michel Bruel
 104",,"Enterprise programming on Javascript - Advanced
 Andrey Vlasov
 303",,,,,,,,"Critical Thinking  for IT-specialist
 Sergey Kladko
 000",,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 312",,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,"Design Patterns
 Jean-Michel Bruel
@@ -2556,7 +2483,7 @@ Andrey Vlasov
 303",,,,,,,,"Critical Thinking  for IT-specialist
 Sergey Kladko
 102",,,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 312",,,,,,,,,,,,,,,"Software Requirements and Specifications (Lab)
 Alberto Sillitti
 103",,,,,,
@@ -2567,7 +2494,7 @@ Andrey Vlasov
 303",,,,,,,,,"Reading Skills for IT-specialist
 Sergey Kladko
 102",,"Programming Windows Services with C++
-Alexey Kostyushko 
+Alexey Kostyushko
 312",,,,,,,,,,,,,,,"Software Requirements and Specifications (Lab)
 Alberto Sillitti
 103",,,,,,
@@ -2577,7 +2504,7 @@ Jean-Michel Bruel
 Konstantin Arkhipov
 102",,,,,,,"Reading Skills for IT-specialist
 Sergey Kladko
-000",,,"Advanced Academic Research, Writing and Performance
+000",,,"Advanced Academic Research- Writing and Performance
 Alexey Kostyushko
 303",,,,,,,,,,,,,,"Software Requirements and Specifications (Lab)
 Alberto Sillitti
@@ -2594,8 +2521,7 @@ Jean-Michel Bruel
 312",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-27/04/2020,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language(Beginners)
-(8:00 - 9:30)
+27/04/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Beginners) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2607,7 +2533,7 @@ Eugene Zuev
 101",,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-28/04/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+28/04/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2623,8 +2549,7 @@ Nikolay Kudasov
 Aliya Samatova
 104",,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-29/04/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language(Advanced)
-(8:00 - 9:30)
+29/04/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Advanced) (8:00 - 9:30)
 Svetlana Sokolova
 320",,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2636,7 +2561,7 @@ Eleonora Ilina
 104",,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-30/04/2020,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,"Functional Programming and Scala Language (Lec)
+30/04/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,"Functional Programming and Scala Language (Lec)
 Eugene Zuev
 101",,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,"Consensus theory and concurrent programming on a shared memory (Lec)
@@ -2647,13 +2572,12 @@ Alexander Tormasov
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,"Consensus theory and concurrent programming on a shared memory (Lab)
 Artem Burmyakov
-314",,,,,,"Russian as a foreign language
-(Beginners)
+314",,,,,,"Russian as a foreign language (Beginners)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-01/05/2020,Friday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Practical Artificial Intelligence
+01/05/2020 ,Friday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Practical Artificial Intelligence
 Stanislav Protasov
 101",,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Practical Artificial Intelligence
@@ -2662,13 +2586,12 @@ Stanislav Protasov
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language
-(Advanced)
+,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Russian as a foreign language (Advanced)
 Svetlana Sokolova
 320",,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-02/05/2020 (Saturday),,,09:00-10:30,,,,,,,"Enterprise programming on Javascript - Advanced
+02/05/2020 ,Saturday,,09:00-10:30,,,,,,,"Enterprise programming on Javascript - Advanced
 Andrey Vlasov
 303",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,"Enterprise programming on Javascript - Advanced
@@ -2682,7 +2605,7 @@ Andrey Vlasov
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-4/5/2020,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+04/05/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2690,7 +2613,7 @@ Andrey Vlasov
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-5/5/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+05/05/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2698,7 +2621,7 @@ Andrey Vlasov
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-6/5/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+06/05/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2706,7 +2629,7 @@ Andrey Vlasov
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7/5/2020,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+07/05/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2714,7 +2637,7 @@ Andrey Vlasov
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-8/5/2020,Friday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+08/05/2020 ,Friday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2722,7 +2645,7 @@ Andrey Vlasov
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-9/5/2020,Saturday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+09/05/2020 ,Saturday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2730,7 +2653,7 @@ Andrey Vlasov
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-11/5/2020,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11/05/2020 ,Monday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2738,7 +2661,7 @@ Andrey Vlasov
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-12/5/2020,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+12/05/2020 ,Tuesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2746,14 +2669,14 @@ Andrey Vlasov
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-13/5/2020,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+13/05/2020 ,Wednesday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,15:45-17:15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-14/5/2020,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14/05/2020 ,Thursday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -2761,7 +2684,7 @@ Andrey Vlasov
 ,,,17:20-18:50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,18:55-20:25,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,20:30-22:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-15/5/2020,Friday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15/05/2020 ,Friday,,09:00-10:30,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,10:35-12:05,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,12:10-13:40,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,14:10-15:40,,,,,,,,,"Product's highly loaded architecture
