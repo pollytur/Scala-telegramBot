@@ -1,15 +1,15 @@
 package projectbot
 
 import java.time.DayOfWeek.valueOf
-import java.time.{DayOfWeek, LocalDate, LocalDateTime, LocalTime}
+import java.time.{Clock, DayOfWeek, LocalDate, LocalDateTime, LocalTime}
 import java.time.format.DateTimeFormatter
 
 object Time4Bot {
   val notificationBefore = 10
 
-  def todayDay(): DayOfWeek = {
+  def todayDay(clock : Clock): DayOfWeek = {
     val df = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-    val today = DateTimeFormatter.ofPattern("dd/MM/yyyy").format(LocalDateTime.now)
+    val today = DateTimeFormatter.ofPattern("dd/MM/yyyy").format(LocalDateTime.now(clock))
     LocalDate.parse(today, df).getDayOfWeek
   }
 
@@ -19,19 +19,19 @@ object Time4Bot {
     transformed.getHour * 60 + transformed.getMinute
   }
 
-  def tillDayEnd(): Int = {
-    val today = DateTimeFormatter.ofPattern("HH:mm").format(LocalDateTime.now)
+  def tillDayEnd(clock : Clock): Int = {
+    val today = DateTimeFormatter.ofPattern("HH:mm").format(LocalDateTime.now(clock))
     60 * 24 - classTime(today)
   }
 
   //  time in minutes
-  def timeTill(day: String, time: String): Int = {
-    val today = todayDay().getValue
+  def timeTill(day: String, time: String, clock : Clock): Int = {
+    val today = todayDay(clock).getValue
     val desired = DayOfWeek.valueOf(day.toUpperCase).getValue
-    if (today >= desired) {
-      if (today > desired) (today - desired) * 24 * 60 + tillDayEnd() + classTime(time.substring(0,5)) - notificationBefore
+    if (today <= desired) {
+      if (today < desired) (desired-today-1) * 24 * 60 + tillDayEnd(clock) + classTime(time.substring(0,5)) - notificationBefore
       else {
-        val now = classTime(DateTimeFormatter.ofPattern("hh:mm").format(LocalDateTime.now))
+        val now = classTime(DateTimeFormatter.ofPattern("HH:mm").format(LocalDateTime.now(clock)))
         val timeOfclass = classTime(time.substring(0, 5))
         if (now > timeOfclass) 24 * 7 * 60 - (now - timeOfclass) - notificationBefore
         else {
@@ -41,18 +41,18 @@ object Time4Bot {
       }
     }
     else {
-      (desired + valueOf("SUNDAY").getValue - today) * 24 * 60 + tillDayEnd() + classTime(time) - notificationBefore
+      (desired + valueOf("SUNDAY").getValue - today-1) * 24 * 60 + tillDayEnd(clock) + classTime(time) - notificationBefore
     }
   }
 
-  def timeBeforeElective(date: LocalDate, time: String): Option[Long] = {
+  def timeBeforeElective(date: LocalDate, time: String, clock : Clock): Option[Long] = {
     val df = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-    val todayInter = DateTimeFormatter.ofPattern("dd/MM/yyyy").format(LocalDateTime.now)
+    val todayInter = DateTimeFormatter.ofPattern("dd/MM/yyyy").format(LocalDateTime.now(clock))
     val today = LocalDate.parse(todayInter, df).toEpochDay
     if (date.toEpochDay - today <= 0) {
       if (date.toEpochDay - today < 0) None
       else {
-        val now = classTime(DateTimeFormatter.ofPattern("hh:mm").format(LocalDateTime.now))
+        val now = classTime(DateTimeFormatter.ofPattern("HH:mm").format(LocalDateTime.now(clock)))
         val timeOfclass = classTime(time.substring(0, 5))
         if (now > timeOfclass) None
         else {
@@ -62,7 +62,7 @@ object Time4Bot {
       }
     }
     else {
-      Some((date.toEpochDay - today) * 60 * 24 + tillDayEnd() + classTime(time.substring(0,5)) - notificationBefore)
+      Some((date.toEpochDay - today-1) * 60 * 24 + tillDayEnd(clock) + classTime(time.substring(0,5)) - notificationBefore)
     }
   }
 }

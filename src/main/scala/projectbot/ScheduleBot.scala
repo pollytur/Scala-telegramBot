@@ -1,7 +1,8 @@
 package projectbot
 
-import projectbot.Time4Bot._
+import java.time.Clock
 
+import projectbot.Time4Bot._
 import com.bot4s.telegram.api.declarative.{Callbacks, Commands}
 import cats.instances.future._
 import com.bot4s.telegram.api.RequestHandler
@@ -13,10 +14,9 @@ import slogging.{LogLevel, LoggerConfig, PrintLoggerFactory}
 
 import scala.concurrent.{Await, Future}
 import cats.syntax.functor._
-import monix.execution.Cancelable
+import monix.execution.{Cancelable, Scheduler}
 import projectbot.MyTables.{CommonClasses, Labs, User, UserCourse, UserLab, Users, UsersCourse, UsersLab}
 import slick.driver.SQLiteDriver.api._
-import monix.execution.Scheduler.{global => scheduler}
 import com.bot4s.telegram.methods._
 import com.bot4s.telegram.models.ChatId.Chat
 import projectbot.Parsing.Core
@@ -31,7 +31,7 @@ class ScheduleBot(val token: String,
                   val electiveLink: String,
                   val coreFile: String,
                   val electiveFile: String,
-                  db: Database) extends TelegramBot
+                  db: Database)(scheduler: Scheduler) (clock: Clock) extends TelegramBot
   with Polling
   with Commands[Future]
   with Callbacks[Future] {
@@ -70,11 +70,8 @@ class ScheduleBot(val token: String,
   //(user_id, course_name, [(scheduler 1 day before, scheduler 10 min before)])
   // - to cancell notifications if course id finished our changed
   var usersElectiveSchedulers = List.empty: List[(Int, String, List[(Cancelable, Cancelable)])]
-
-
-  // Use sttp-based backend
-  //  implicit val backend = SttpBackends.default
-  //  override val client: RequestHandler[Future] = new FutureSttpClient(token)
+// this was done to enable testing without PowerMock
+//  val clock = Clock.systemDefaultZone
 
   // Or just the scalaj-http backend
   override val client: RequestHandler[Future] = new ScalajHttpClient(token)
@@ -116,7 +113,6 @@ class ScheduleBot(val token: String,
   onCommand("set_group") {
     implicit msg =>
       reply("Select your group number",
-
         replyMarkup = Some(InlineKeyboardMarkup
           .singleColumn(groupButtons)
         )
@@ -327,7 +323,7 @@ class ScheduleBot(val token: String,
       val f = db.run(theirCourses)
       Await.result(f, 2.second)
       val res = f.value.get.get
-      val dayOfWeek = todayDay().toString.toLowerCase
+      val dayOfWeek = todayDay(clock).toString.toLowerCase
       val afterSearch = classesOnTheDay(dayOfWeek, res)
       val todayLectures = afterSearch._1
       val todayTutorials = afterSearch._2
@@ -365,7 +361,7 @@ class ScheduleBot(val token: String,
     var res = List.empty: List[(Cancelable, Cancelable)]
     for (v <- values) {
       breakable {
-        val timeBefore = timeBeforeElective(v.date, v.time)
+        val timeBefore = timeBeforeElective(v.date, v.time, clock)
         timeBefore match {
           case Some(value) =>
             val beforeDay = scheduler.scheduleOnce((value - 24 * 60).minutes) {
@@ -385,7 +381,7 @@ class ScheduleBot(val token: String,
   }
 
   def setupLab(e: (Parsing.Labs, Option[String]), fromId: Int): Cancelable = {
-    val kk = timeTill(e._1.weekday, e._1.time.substring(0, 5))
+    val kk = timeTill(e._1.weekday, e._1.time.substring(0, 5), clock)
     scheduler.scheduleWithFixedDelay(kk.minutes, 7.days) {
       request(SendMessage(Chat(fromId), s"Your lab from ${e._1.ta} on ${e._1.courseName} will be " +
         s"in 10 minutes (${e._1.time}) at room ${e._1.room}"))
@@ -393,20 +389,20 @@ class ScheduleBot(val token: String,
   }
 
   def setupCore(res: Core, course: String, fromId: Int): Unit = {
-    val c = scheduler.scheduleWithFixedDelay(timeTill(res.lecDay, res.lecTime.substring(0, 5)).minutes, 7.days) {
+    val c = scheduler.scheduleWithFixedDelay(timeTill(res.lecDay, res.lecTime.substring(0, 5), clock).minutes, 7.days) {
       request(SendMessage(Chat(fromId), s"Your lecture from ${res.lecturer} on $course will be " +
         s"in 10 minutes (${res.lecTime}) at room ${res.lecRoom}"))
     }
     usersSchedulers = usersSchedulers :+ (fromId, course + "-lec", c)
     if (res.tutDay.nonEmpty) {
-      val c = scheduler.scheduleWithFixedDelay(timeTill(res.tutDay.get, res.tutTime.get.substring(0, 5)).minutes, 7.days) {
+      val c = scheduler.scheduleWithFixedDelay(timeTill(res.tutDay.get, res.tutTime.get.substring(0, 5), clock).minutes, 7.days) {
         request(SendMessage(Chat(fromId), s"Your tutorial from ${res.tutTeacher} on $course will be " +
           s"in 10 minutes (${res.tutTime}) at room ${res.tutRoom}"))
       }
       usersSchedulers = usersSchedulers :+ (fromId, course + "-tut", c)
-      val todb = db.run(DBIO.seq(courses.insertOrUpdate(UsersCourse(fromId, course, false))))
-      Await.result(todb, 100.millis)
     }
+    val todb = db.run(DBIO.seq(courses.insertOrUpdate(UsersCourse(fromId, course, false))))
+    Await.result(todb, 100.millis)
   }
 
   def setupCoursesAndLabs(value: String, cbq: CallbackQuery): Unit = {
@@ -446,6 +442,7 @@ class ScheduleBot(val token: String,
     }
   }
 
+//  deletes reminders for classes named in the seq
   def deleteReminders(seq: Seq[String], userId: Int): Unit = {
     val usersCourses = usersSchedulers.filter(x => x._1 == userId && seq.contains(x._2.substring(0, x._2.length - 4)))
     for (course <- usersCourses) {
@@ -485,10 +482,7 @@ class ScheduleBot(val token: String,
         //        todo return message "use /change_group"
         val insert = db.run(DBIO.seq(users += User(cbq.from.id, value)))
         Await.result(insert, 100.millis)
-//        todo to delete
-//        println(s"before $usersSchedulers")
         setupCoursesAndLabs(value, cbq)
-//        println(s"after $usersSchedulers")
         val fut = emptyMarkup(cbq)
         ackFuture.zip(fut.getOrElse(Future.successful(()))).void
 

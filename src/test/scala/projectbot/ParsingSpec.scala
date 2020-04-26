@@ -26,7 +26,6 @@ class ParsingSpec extends FlatSpec with Matchers {
     "Practical Artificial Intelligence", "Introduction to Career Development for IT-specialist", "Mobile development using QT",
     "Psychology of IT-specialist", "Russian as a foreign language", "Software Requirements and Specifications")
 
-
   val m19labs = List(Labs("monday","10:35-12:05","advanced information retrieval","albina khusainova",313),
   Labs("tuesday","14:10-15:40","advanced machine learning","imad eddine ibrahim bekkouch",106),
   Labs("wednesday","12:10-13:40","advanced statistics","mohammad bahrami",321))
@@ -38,8 +37,6 @@ class ParsingSpec extends FlatSpec with Matchers {
   Labs("thursday","14:10-15:40","english (5)","rabab marouf",101),
   Labs("thursday","15:45-17:15","theoretical computer science","mansur khazeev",318),
   Labs("friday","12:10-13:40","mathematical analysis 2","ramil dautov",318))
-
-
 
   val b19cores = List("monday", "14:10-15:40", "data structure and algorithms (lec) ", "adil khan", "108",
     "monday", "15:45-17:15", "data structure and algorithms (tutorial) ", "luiz araújo", "108",

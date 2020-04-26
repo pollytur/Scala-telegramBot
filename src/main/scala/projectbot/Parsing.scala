@@ -43,7 +43,7 @@ object Parsing {
 
   def readData(fileName: String): Vector[Array[String]] = {
     for {
-      line <- Source.fromFile(fileName).getLines().toVector
+      line <- Source.fromResource(fileName).getLines().toVector
       //      values = line.split(",").map(_.trim)
       values = line.split(",")
     } yield values
