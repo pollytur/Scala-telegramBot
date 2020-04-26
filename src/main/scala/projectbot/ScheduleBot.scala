@@ -144,7 +144,7 @@ class ScheduleBot(val token: String,
       val f = db.run(theirCourses)
       Await.result(f, 500.millis)
       val res = f.value.get.get
-      if (res.isEmpty) reply(s"Your have not any courses yet").void
+      if (res.isEmpty) reply(s"You do not have any courses yet").void
       else reply(s"Your courses \n ${res.mkString("\n")}").void
   }
 
@@ -268,17 +268,18 @@ class ScheduleBot(val token: String,
     }
   }
 
-//  will not show id there were no notifications
+//  will not show if there were no notifications
   onCommand("turn_off_notification") { implicit msg =>
     withArgs { args =>
       if (args.isEmpty) reply("Please enter the subject", replyMarkup = None).void
       else {
         val subject = args.take(args.length).mkString(" ").toLowerCase()
-        println(s"before $usersSchedulers")
         val isIn = usersSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject))
         if (isIn.nonEmpty) usersSchedulers = usersSchedulers diff isIn;
         isIn.map(x => x._3.cancel())
-        println(s"before $usersSchedulers")
+        val isInElectives = usersElectiveSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject)) : List[(Int,String,List[(Cancelable, Cancelable)])]
+        if (isIn.nonEmpty) usersElectiveSchedulers = usersElectiveSchedulers diff isInElectives;
+        isInElectives.flatMap(x => x._3).map(x=>{x._1.cancel(); x._2.cancel()})
         reply(s"Notifications for $subject are successfully turned off").void
       }
     }
@@ -331,7 +332,7 @@ class ScheduleBot(val token: String,
       if (todayLectures.isEmpty && todayTutorials.isEmpty && todayLabs.isEmpty) reply(s"Your have no classes today").void
       else {
         val toPrint = s"Lectures \n ${todayLectures.mkString("\n")} \n Tutorials  \n ${todayTutorials.mkString("\n")}" +
-          s"\n Labs \n  \n ${todayLabs.mkString("\n")}"
+          s"\n Labs  \n ${todayLabs.mkString("\n")}"
         reply(s"Your courses for today are \n $toPrint").void
       }
   }
