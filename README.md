@@ -3,9 +3,11 @@
  This is a bot helps to organize students life remaining about upcoming classes. It is implemented based on Innopolis University Schedule for Spring 2020, however, you can change Parsing module and adapt it for your timetable. It supports obligatory regular classes and non-regular elective classes.
  ###  Commands
  * `/set_group` - returns markup with possible groups, the markup disappear after the group was chosen and setup  
- ![](./images/markupExample.png)
+ <img src="./images/markupExample.png" width="500px"/>   
+ 
  * `/set_elective` - returns markup with electives, markup disappear after elective was chosen and setup
- ![](./images/electiveExample.png)
+ <img src="./images/electiveExample.png" width="500px"/>  
+ 
  * `/change_group` - same user experience as /set_group. It changes info about user in database, remove old remainders and setups new ones.
  * `/core_link` - returns link to corresponding google-doc table
  * `/electives_link` - returns link to corresponding google-doc table
