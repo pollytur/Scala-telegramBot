@@ -17,14 +17,10 @@ import scala.concurrent.Await
 
 
 class ScheduleBotSpec extends FlatSpec with Matchers {
-//  val testScheduler = TestScheduler()
-//  testScheduler.scheduleOnce(1.second) {
-//    println("Delayed execution!")
-//  }
-//  testScheduler.executionModel
 //  empty database for tests
   val db = Database.forConfig("bot")
-  MyTables.createTables(db)
+//  you need to uncomment it if testing only this block of tests
+//  MyTables.createTables(db)
   val coreFile = "Core Courses_Spring_2019-2020 - BS,MS_Spring 2019.csv"
   val electiveFile = "Electives Schedule Spring 2020 Bachelors - Main.csv"
   val bot = new ScheduleBot("mew", "coreLink", "electiveLink",
@@ -307,12 +303,14 @@ class ScheduleBotSpec extends FlatSpec with Matchers {
       message=None, inlineMessageId=None,
       chatInstance = "8722516864877688585",
       data=Some("B19-03"), gameShortName=None )
-//
+//    you need to uncomment it if testing only this block of tests
 //    MyTables.fillDatabase(db, coreFile)
     bot.setupCoursesAndLabs("B18-03", cbq)
     val theirCourses = bot.courses.filter(_.id === 399308946).map(e => e.class_id).result
     val f = db.run(theirCourses)
     Await.result(f, 2.second)
+
+
     val res = f.value.get.get
     val todayClasses = bot.classesOnTheDay("monday", res)
     val expected = (List(("data modeling and databases 2","alexey kanatov","12:10-13:40",105),
@@ -322,5 +320,5 @@ class ScheduleBotSpec extends FlatSpec with Matchers {
 
     todayClasses shouldBe expected
   }
-
+//  db.close()
 }

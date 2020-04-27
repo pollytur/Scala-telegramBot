@@ -31,13 +31,14 @@ class ScheduleBot(val token: String,
                   val electiveLink: String,
                   val coreFile: String,
                   val electiveFile: String,
-                  db: Database)(scheduler: Scheduler) (clock: Clock) extends TelegramBot
+                  db: Database)(scheduler: Scheduler)(clock: Clock) extends TelegramBot
   with Polling
   with Commands[Future]
   with Callbacks[Future] {
 
   LoggerConfig.factory = PrintLoggerFactory()
   LoggerConfig.level = LogLevel.TRACE
+
 
   def createGroupButtons(): Seq[InlineKeyboardButton] = {
     Parsing.groups(coreFile).map(e => InlineKeyboardButton.callbackData(e, e))
@@ -55,7 +56,7 @@ class ScheduleBot(val token: String,
   val electiveButtons: Seq[InlineKeyboardButton] = createElectiveButtons()
   val updatedGroupButton: Seq[InlineKeyboardButton] = createGroupUpdateButtons()
   val groupTags: Seq[String] = Parsing.groups(coreFile)
-  val electiveTags: Seq[String] = Parsing.listOfElectives(electiveFile).map(e=>e.toLowerCase)
+  val electiveTags: Seq[String] = Parsing.listOfElectives(electiveFile).map(e => e.toLowerCase)
   val updatedGroupTags: Seq[String] = Parsing.groups(coreFile).map(e => "updated-" + e.toLowerCase())
 
   val labs = TableQuery[Labs]
@@ -70,8 +71,6 @@ class ScheduleBot(val token: String,
   //(user_id, course_name, [(scheduler 1 day before, scheduler 10 min before)])
   // - to cancell notifications if course id finished our changed
   var usersElectiveSchedulers = List.empty: List[(Int, String, List[(Cancelable, Cancelable)])]
-// this was done to enable testing without PowerMock
-//  val clock = Clock.systemDefaultZone
 
   // Or just the scalaj-http backend
   override val client: RequestHandler[Future] = new ScalajHttpClient(token)
@@ -88,7 +87,7 @@ class ScheduleBot(val token: String,
     for (cl <- res) {
       val hasLect = db.run(cores.filter(x => x.classId === cl && x.dayLecture === day)
         .map(e => (e.classId, e.prof, e.lectureTime, e.lectureRoom)).result)
-      Await.result(hasLect, 100.millis)
+      Await.result(hasLect, 500.millis)
       if (hasLect.value.get.get.nonEmpty) todayLectures = todayLectures ++ List(hasLect.value.get.get.head)
 
       val hasTut = db.run(cores.filter(x => x.classId === cl
@@ -98,12 +97,12 @@ class ScheduleBot(val token: String,
         && !x.tutorialRoom.isEmpty
         && x.dayTutorial === day)
         .map(e => (e.classId, e.tutorialTeacher, e.tutorialTime, e.tutorialRoom)).result)
-      Await.result(hasTut, 100.millis)
+      Await.result(hasTut, 500.millis)
       if (hasTut.value.get.get.nonEmpty) todayTutorials = todayTutorials ++ List(hasTut.value.get.get.head)
 
       val haslab = db.run(labs.filter(x => x.classId === cl && x.labDay === day)
         .map(e => (e.classId, e.ta, e.labTime, e.labRoom)).result)
-      Await.result(haslab, 100.millis)
+      Await.result(haslab, 500.millis)
       if (haslab.value.get.get.nonEmpty) todayLabs = todayLabs ++ List(haslab.value.get.get.head)
     }
     (todayLectures, todayTutorials, todayLabs)
@@ -190,25 +189,27 @@ class ScheduleBot(val token: String,
         else {
           val subject = args.take(args.length).drop(1).mkString(" ").toLowerCase()
           val isInLectures = db.run(courses.filter(x => x.id === msg.from.get.id && x.class_id === subject).result)
-          Await.result(isInLectures, 100.millis)
+          Await.result(isInLectures, 500.millis)
           val isInLabs = db.run(userLabs.filter(x => x.id === msg.from.get.id && x.lab_id === subject).result)
-          Await.result(isInLabs, 100.millis)
+          Await.result(isInLabs, 500.millis)
           if (isInLabs.value.get.get.isEmpty && isInLectures.value.get.get.isEmpty) {
             reply(s"You do not have this subject, If you want to add it, please, use 'set_core' command " +
               s"or check 'my_courses' to check if you have entered the course name correctly").void
           }
-          if (isInLabs.value.get.get.isEmpty && isInLectures.value.get.get.nonEmpty) {
-            reply(s"You have only lectures (and maybe tutorials) this subject, hence, group does not matter").void
-          }
           else {
-            val update = db.run(DBIO.seq(userLabs.insertOrUpdate(UsersLab(msg.from.get.id, subject, Some(group)))))
-            Await.result(update, 100.millis)
-            val reminder = usersSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject + "-lab"))
-            if (reminder.nonEmpty) {
-              reminder.head._3.cancel()
-              usersSchedulers = usersSchedulers diff List(reminder.head)
+            if (isInLabs.value.get.get.isEmpty && isInLectures.value.get.get.nonEmpty) {
+              reply(s"You have only lectures (and maybe tutorials) this subject, hence, group does not matter").void
             }
-            reply(s"You have successfully changed group for $subject to $group").void
+            else {
+              val update = db.run(DBIO.seq(userLabs.insertOrUpdate(UsersLab(msg.from.get.id, subject, Some(group)))))
+              Await.result(update, 500.millis)
+              val reminder = usersSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject + "-lab"))
+              if (reminder.nonEmpty) {
+                reminder.head._3.cancel()
+                usersSchedulers = usersSchedulers diff List(reminder.head)
+              }
+              reply(s"You have successfully changed group for $subject to $group").void
+            }
           }
         }
       }
@@ -225,9 +226,9 @@ class ScheduleBot(val token: String,
       else {
         val subject = args.take(args.length).mkString(" ").toLowerCase()
         val gr = db.run(labs.filter(x => x.classId === subject && !x.groupId.isEmpty).map(x => x.groupId).result)
-        Await.result(gr, 100.millis)
+        Await.result(gr, 500.millis)
         if (gr.value.get.get.nonEmpty) {
-          reply(s"Groups are \n${gr.value.get.get.map(e=>e.get).mkString("\n")}").void
+          reply(s"Groups are \n${gr.value.get.get.map(e => e.get).mkString("\n")}").void
         }
         else reply("There are no labs for this subject, hence, groups does not matter. If you want to see more info," +
           " go directly to timetable using 'core_link' ", replyMarkup = None).void
@@ -244,22 +245,22 @@ class ScheduleBot(val token: String,
         else {
           val subject = args.take(args.length).drop(1).mkString(" ").toLowerCase()
           val isReal = db.run(cores.filter(_.classId === subject).exists.result)
-          Await.result(isReal, 100.millis)
+          Await.result(isReal, 500.millis)
           val isInLabs = db.run(labs.filter(x => x.classId === subject && !x.groupId.isEmpty && x.groupId === group).exists.result)
-          Await.result(isInLabs, 100.millis)
+          Await.result(isInLabs, 500.millis)
           if (!isReal.value.get.get && !isInLabs.value.get.get) reply(s"There is no such a core course").void
           else {
             if (isReal.value.get.get) {
               val ifReal = db.run(cores.filter(_.classId === subject).result)
-              Await.result(ifReal, 100.millis)
+              Await.result(ifReal, 500.millis)
               setupCore(ifReal.value.get.get.head, subject, msg.from.get.id)
             }
             if (isInLabs.value.get.get) {
               val ifInLabs = db.run(labs.filter(x => x.classId === subject && !x.groupId.isEmpty && x.groupId === group).result)
-              Await.result(ifInLabs, 100.millis)
+              Await.result(ifInLabs, 500.millis)
               setupLab(ifInLabs.value.get.get.head, msg.from.get.id)
-              val insert = db.run(userLabs.insertOrUpdate(UsersLab(msg.from.get.id, subject, Some(group) )))
-              Await.result(insert, 100.millis)
+              val insert = db.run(userLabs.insertOrUpdate(UsersLab(msg.from.get.id, subject, Some(group))))
+              Await.result(insert, 500.millis)
             }
             reply(s"Course $subject is successfully added for group $group").void
           }
@@ -268,18 +269,30 @@ class ScheduleBot(val token: String,
     }
   }
 
-//  will not show if there were no notifications
+  //  will not show if there were no notifications
   onCommand("turn_off_notification") { implicit msg =>
     withArgs { args =>
       if (args.isEmpty) reply("Please enter the subject", replyMarkup = None).void
       else {
         val subject = args.take(args.length).mkString(" ").toLowerCase()
         val isIn = usersSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject))
-        if (isIn.nonEmpty) usersSchedulers = usersSchedulers diff isIn;
+        if (isIn.nonEmpty) {
+          usersSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject)).map(x=>x._3.cancel())
+          usersSchedulers = usersSchedulers diff isIn
+        }
         isIn.map(x => x._3.cancel())
-        val isInElectives = usersElectiveSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject)) : List[(Int,String,List[(Cancelable, Cancelable)])]
-        if (isIn.nonEmpty) usersElectiveSchedulers = usersElectiveSchedulers diff isInElectives;
-        isInElectives.flatMap(x => x._3).map(x=>{x._1.cancel(); x._2.cancel()})
+        val isInElectives = usersElectiveSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject)): List[(Int, String, List[(Cancelable, Cancelable)])]
+        if (isIn.nonEmpty) {
+          usersElectiveSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject)).flatMap(x => x._3).foreach(x => {
+            x._1.cancel();
+            x._2.cancel()
+          })
+          usersElectiveSchedulers = usersElectiveSchedulers diff isInElectives
+        }
+        isInElectives.flatMap(x => x._3).map(x => {
+          x._1.cancel();
+          x._2.cancel()
+        })
         reply(s"Notifications for $subject are successfully turned off").void
       }
     }
@@ -302,16 +315,16 @@ class ScheduleBot(val token: String,
           deleteElective(subject, msg.from.get.id)
         }
         val ifhasLabs = db.run(userLabs.filter(x => x.lab_id === subject && x.id === msg.from.get.id).exists.result)
-        Await.result(ifhasLabs, 100.millis)
+        Await.result(ifhasLabs, 500.millis)
         if (ifhasLabs.value.get.get) {
           val hasLabs = db.run(userLabs.filter(x => x.lab_id === subject && x.id === msg.from.get.id).delete)
           Await.result(hasLabs, 100.millis)
         }
         val ifHasCores = db.run(courses.filter(x => x.class_id === subject && x.id === msg.from.get.id).exists.result)
-        Await.result(ifHasCores, 100.millis)
+        Await.result(ifHasCores, 500.millis)
         if (ifHasCores.value.get.get) {
           val hasCores = db.run(courses.filter(x => x.class_id === subject && x.id === msg.from.get.id).delete)
-          Await.result(hasCores, 100.millis)
+          Await.result(hasCores, 500.millis)
         }
         reply("The subject was successfully deleted").void
       }
@@ -403,14 +416,14 @@ class ScheduleBot(val token: String,
       usersSchedulers = usersSchedulers :+ (fromId, course + "-tut", c)
     }
     val todb = db.run(DBIO.seq(courses.insertOrUpdate(UsersCourse(fromId, course, false))))
-    Await.result(todb, 100.millis)
+    Await.result(todb, 500.millis)
   }
 
   def setupCoursesAndLabs(value: String, cbq: CallbackQuery): Unit = {
     val theirLabs = labs.filter(_.groupId === value).result
     val ret = db.run(theirLabs)
-    Await.result(ret, 1.second)
-    //        todo if not success??
+    Await.result(ret, 2.seconds)
+//    todo if not success
     val res = ret.value.get.get
     val toInsert = res.map(el => userLabs.insertOrUpdate(UsersLab(cbq.from.id, el._1.courseName, Some(value))))
     val labsinOneGo = DBIO.sequence(toInsert)
@@ -429,10 +442,10 @@ class ScheduleBot(val token: String,
         val unique = Parsing.uniqueCourses(v, false)
         for (u <- unique) {
           val result = db.run(DBIO.seq(courses.insertOrUpdate(UsersCourse(cbq.from.id, u, false))))
-          Await.result(result, 100.millis)
+          Await.result(result, 500.millis)
           // for regular classes we assume it to be every week
           val theCourse = db.run(cores.filter(_.classId === u).result)
-          Await.result(theCourse, 100.millis)
+          Await.result(theCourse, 500.millis)
           val res = theCourse.value.get.get.head
           //          in time there are always more than 5 symbols hence, should I check?
           //          example of check is here
@@ -443,7 +456,7 @@ class ScheduleBot(val token: String,
     }
   }
 
-//  deletes reminders for classes named in the seq
+  //  deletes reminders for classes named in the seq
   def deleteReminders(seq: Seq[String], userId: Int): Unit = {
     val usersCourses = usersSchedulers.filter(x => x._1 == userId && seq.contains(x._2.substring(0, x._2.length - 4)))
     for (course <- usersCourses) {
@@ -455,23 +468,18 @@ class ScheduleBot(val token: String,
   def deleteAllReminders(): Unit = {
     usersSchedulers.map(el => el._3.cancel())
     usersSchedulers = List.empty: List[(Int, String, Cancelable)]
-    usersElectiveSchedulers.map(el => el._3.map(e => {
-      e._1.cancel(); e._2.cancel()
-    }))
+    usersElectiveSchedulers.map(el => el._3.map(e => {e._1.cancel();e._2.cancel()}))
     usersElectiveSchedulers = List.empty: List[(Int, String, List[(Cancelable, Cancelable)])]
   }
 
-  //  def cancelElective(electiveName: String, userId: Int): Unit = {}
-
   def deleteElective(electiveName: String, userId: Int): Unit = {
     val elects = usersElectiveSchedulers.filter(e => e._2 == electiveName && e._1 == userId)
-    for (e <- elects) {
-      val el = e._3
-      for (elem <- el) {
-        elem._2.cancel()
-      }
-    }
+    usersElectiveSchedulers.filter(e => e._2 == electiveName && e._1 == userId).flatMap(x => x._3).foreach(x => {
+      x._1.cancel();
+      x._2.cancel()
+    })
     usersElectiveSchedulers = usersElectiveSchedulers diff elects
+    elects.flatMap(x => x._3).foreach(x => {x._1.cancel();x._2.cancel()})
   }
 
   onCallbackQuery { implicit cbq =>
@@ -481,8 +489,9 @@ class ScheduleBot(val token: String,
         val ackFuture = ackCallback(Some(s"${cbq.from.firstName} pressed the button with $value"))(cbq)
         //        one user will not be created twice due to the primary keys
         //        todo return message "use /change_group"
+
         val insert = db.run(DBIO.seq(users += User(cbq.from.id, value)))
-        Await.result(insert, 100.millis)
+        Await.result(insert, 1000.millis)
         setupCoursesAndLabs(value, cbq)
         val fut = emptyMarkup(cbq)
         ackFuture.zip(fut.getOrElse(Future.successful(()))).void
@@ -502,47 +511,52 @@ class ScheduleBot(val token: String,
             val updateGroup = hasGroupTag(cbq, updatedGroupTags)
             updateGroup match {
               case Some(valueDirty) =>
-//                println(s"before $usersSchedulers")
+                //                println(s"before $usersSchedulers")
                 val value = valueDirty.replace("updated-", "").toUpperCase()
                 val ackFuture = ackCallback(Some(s"${cbq.from.firstName} pressed the button with $value"))(cbq)
                 val prevGroup = db.run(users.filter(_.id === cbq.from.id).map(e => e.group_id).result)
                 Await.result(prevGroup, 1.second)
 
                 val insert = db.run(DBIO.seq(users.insertOrUpdate(User(cbq.from.id, value))))
-                Await.result(insert, 100.millis)
+                Await.result(insert, 500.millis)
+
                 //this will delete all labs for the prev group and this person
-                val oldLabs = userLabs.filter(x => (x.id === cbq.from.id
-                  &&
-                  !x.group_id.isEmpty
-                  &&
-                  x.group_id === prevGroup.value.get.get.head))
-                val intermediateLabs = db.run(oldLabs.map(e => e.lab_id).result)
-                Await.result(intermediateLabs, 100.millis)
-                deleteReminders(intermediateLabs.value.get.get, cbq.from.id)
+                if (prevGroup.value.get.get.nonEmpty) {
+                  val oldLabs = userLabs.filter(x => (x.id === cbq.from.id
+                    &&
+                    !x.group_id.isEmpty
+                    &&
+                    x.group_id === prevGroup.value.get.get.head))
+                  val intermediateLabs = db.run(oldLabs.map(e => e.lab_id).result)
+                  Await.result(intermediateLabs, 500.millis)
+                  deleteReminders(intermediateLabs.value.get.get, cbq.from.id)
 
-                val action = oldLabs.delete
-                val affectedRowsCount: Future[Int] = db.run(action)
-                Await.result(affectedRowsCount, 1.second)
+                  val action = oldLabs.delete
+                  val affectedRowsCount: Future[Int] = db.run(action)
+                  Await.result(affectedRowsCount, 1.second)}
 
-                val oldCourses = courses.filter(x => x.id === cbq.from.id && !x.is_elective)
-                val intermediateCores = db.run(oldCourses.map(e => e.class_id).result)
-                Await.result(intermediateCores, 100.millis)
-                deleteReminders(intermediateCores.value.get.get, cbq.from.id)
+                  val oldCourses = courses.filter(x => x.id === cbq.from.id && !x.is_elective)
+                  val intermediateCores = db.run(oldCourses.map(e => e.class_id).result)
+                  Await.result(intermediateCores, 500.millis)
+                  deleteReminders(intermediateCores.value.get.get, cbq.from.id)
 
-                val action2 = oldCourses.delete
-                val affectedRowsCount2: Future[Int] = db.run(action2)
-                Await.result(affectedRowsCount2, 1.second)
+                  val action2 = oldCourses.delete
+                  val affectedRowsCount2: Future[Int] = db.run(action2)
+                  Await.result(affectedRowsCount2, 1.second)
 
 
-                setupCoursesAndLabs(value, cbq)
-//                println(s"after $usersSchedulers")
-                val fut = emptyMarkup(cbq)
-                ackFuture.zip(fut.getOrElse(Future.successful(()))).void
+                  setupCoursesAndLabs(value, cbq)
+                  //                println(s"after $usersSchedulers")
+                  val fut = emptyMarkup(cbq)
+                  ackFuture.zip(fut.getOrElse(Future.successful(()))).void
 
-              case _ =>
-                val ackFuture = ackCallback(Some(s"Unexpected callback, try entering the command once again"))(cbq)
-                val fut = emptyMarkup(cbq)
-                ackFuture.zip(fut.getOrElse(Future.successful(()))).void
+
+
+                  case _ =>
+                    val ackFuture = ackCallback(None)(cbq)
+                    val fut = emptyMarkup(cbq)
+                    ackFuture.zip(fut.getOrElse(Future.successful(()))).void
+
             }
         }
     }
