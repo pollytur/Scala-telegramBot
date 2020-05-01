@@ -16,12 +16,15 @@ import scala.concurrent.{Await, Future}
 import cats.syntax.functor._
 import monix.execution.{Cancelable, Scheduler}
 import projectbot.MyTables.{CommonClasses, Labs, User, UserCourse, UserLab, Users, UsersCourse, UsersLab}
-import slick.driver.SQLiteDriver.api._
+//import slick.driver.SQLiteDriver.api._
+
+import slick.driver.PostgresDriver.api._
 import com.bot4s.telegram.methods._
 import com.bot4s.telegram.models.ChatId.Chat
 import projectbot.Parsing.Core
 
 import scala.concurrent.duration._
+import scala.util.Failure
 import scala.util.control.Breaks.{break, breakable}
 
 /** Generates random values.
@@ -87,7 +90,7 @@ class ScheduleBot(val token: String,
     for (cl <- res) {
       val hasLect = db.run(cores.filter(x => x.classId === cl && x.dayLecture === day)
         .map(e => (e.classId, e.prof, e.lectureTime, e.lectureRoom)).result)
-      Await.result(hasLect, 500.millis)
+      Await.result(hasLect, 5000.millis)
       if (hasLect.value.get.get.nonEmpty) todayLectures = todayLectures ++ List(hasLect.value.get.get.head)
 
       val hasTut = db.run(cores.filter(x => x.classId === cl
@@ -97,12 +100,12 @@ class ScheduleBot(val token: String,
         && !x.tutorialRoom.isEmpty
         && x.dayTutorial === day)
         .map(e => (e.classId, e.tutorialTeacher, e.tutorialTime, e.tutorialRoom)).result)
-      Await.result(hasTut, 500.millis)
+      Await.result(hasTut, 5000.millis)
       if (hasTut.value.get.get.nonEmpty) todayTutorials = todayTutorials ++ List(hasTut.value.get.get.head)
 
       val haslab = db.run(labs.filter(x => x.classId === cl && x.labDay === day)
         .map(e => (e.classId, e.ta, e.labTime, e.labRoom)).result)
-      Await.result(haslab, 500.millis)
+      Await.result(haslab, 5000.millis)
       if (haslab.value.get.get.nonEmpty) todayLabs = todayLabs ++ List(haslab.value.get.get.head)
     }
     (todayLectures, todayTutorials, todayLabs)
@@ -140,11 +143,11 @@ class ScheduleBot(val token: String,
   onCommand("my_courses") {
     implicit msg =>
       val theirCourses = courses.filter(_.id === msg.from.get.id).map(e => e.class_id).result
-      val f = db.run(theirCourses)
-      Await.result(f, 500.millis)
-      val res = f.value.get.get
-      if (res.isEmpty) reply(s"You do not have any courses yet").void
-      else reply(s"Your courses \n ${res.mkString("\n")}").void
+      db.run(theirCourses).flatMap { res =>
+        if (res.nonEmpty) reply(s"Your courses \n ${res.mkString("\n")}")
+        else reply(s"You do not have any courses yet")
+
+      }.void
   }
 
   onCommand("change_group") {
@@ -162,19 +165,19 @@ class ScheduleBot(val token: String,
       else {
         val day = args.head.toLowerCase()
         val theirCourses = courses.filter(_.id === msg.from.get.id).map(e => e.class_id).result
-        val f = db.run(theirCourses)
-        Await.result(f, 2.second)
-        val res = f.value.get.get
-        val afterSearch = classesOnTheDay(day, res)
-        val todayLectures = afterSearch._1
-        val todayTutorials = afterSearch._2
-        val todayLabs = afterSearch._3
-        if (todayLectures.isEmpty && todayTutorials.isEmpty && todayLabs.isEmpty) reply(s"Your have no classes on ${day}").void
-        else {
-          val toPrint = s"Lectures \n ${todayLectures.mkString("\n")} \n Tutorials  \n ${todayTutorials.mkString("\n")}" +
-            s"\n Labs \n  \n ${todayLabs.mkString("\n")}"
-          reply(s"Your courses for $day are \n $toPrint").void
-        }
+        db.run(theirCourses).flatMap { res =>
+          val afterSearch = classesOnTheDay(day, res)
+          val todayLectures = afterSearch._1
+          val todayTutorials = afterSearch._2
+          val todayLabs = afterSearch._3
+          if (todayLectures.isEmpty && todayTutorials.isEmpty && todayLabs.isEmpty) reply(s"Your have no classes on ${day}")
+          else {
+            val toPrint = s"Lectures \n ${todayLectures.mkString("\n")} \n Tutorials  \n ${todayTutorials.mkString("\n")}" +
+              s"\n Labs \n  \n ${todayLabs.mkString("\n")}"
+            reply(s"Your courses for $day are \n $toPrint")
+          }
+
+        }.void
       }
     }
   }
@@ -188,29 +191,29 @@ class ScheduleBot(val token: String,
         if (!groupTags.contains(group)) reply(s"$group is invalid group. Use 'groups' to see the list of all groups ").void
         else {
           val subject = args.take(args.length).drop(1).mkString(" ").toLowerCase()
-          val isInLectures = db.run(courses.filter(x => x.id === msg.from.get.id && x.class_id === subject).result)
-          Await.result(isInLectures, 500.millis)
-          val isInLabs = db.run(userLabs.filter(x => x.id === msg.from.get.id && x.lab_id === subject).result)
-          Await.result(isInLabs, 500.millis)
-          if (isInLabs.value.get.get.isEmpty && isInLectures.value.get.get.isEmpty) {
-            reply(s"You do not have this subject, If you want to add it, please, use 'set_core' command " +
-              s"or check 'my_courses' to check if you have entered the course name correctly").void
-          }
-          else {
-            if (isInLabs.value.get.get.isEmpty && isInLectures.value.get.get.nonEmpty) {
-              reply(s"You have only lectures (and maybe tutorials) this subject, hence, group does not matter").void
-            }
-            else {
-              val update = db.run(DBIO.seq(userLabs.insertOrUpdate(UsersLab(msg.from.get.id, subject, Some(group)))))
-              Await.result(update, 500.millis)
-              val reminder = usersSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject + "-lab"))
-              if (reminder.nonEmpty) {
-                reminder.head._3.cancel()
-                usersSchedulers = usersSchedulers diff List(reminder.head)
+          db.run(courses.filter(x => x.id === msg.from.get.id && x.class_id === subject).result).flatMap { isInLectures =>
+            db.run(userLabs.filter(x => x.id === msg.from.get.id && x.lab_id === subject).result).flatMap { isInLabs =>
+              if (isInLabs.isEmpty && isInLectures.isEmpty) {
+                reply(s"You do not have this subject, If you want to add it, please, use 'set_core' command " +
+                  s"or check 'my_courses' to check if you have entered the course name correctly")
               }
-              reply(s"You have successfully changed group for $subject to $group").void
+              else {
+                if (isInLabs.isEmpty && isInLectures.nonEmpty) {
+                  reply(s"You have only lectures (and maybe tutorials) this subject, hence, group does not matter")
+                }
+                else {
+                  db.run(DBIO.seq(userLabs.insertOrUpdate(UsersLab(msg.from.get.id, subject, Some(group))))).flatMap { _ =>
+                    val reminder = usersSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject + "-lab"))
+                    if (reminder.nonEmpty) {
+                      reminder.head._3.cancel()
+                      usersSchedulers = usersSchedulers diff List(reminder.head)
+                    }
+                    reply(s"You have successfully changed group for $subject to $group")
+                  }
+                }
+              }
             }
-          }
+          }.void
         }
       }
     }
@@ -225,13 +228,13 @@ class ScheduleBot(val token: String,
       if (args.isEmpty) reply("Please enter the subject you would like to see groups to", replyMarkup = None).void
       else {
         val subject = args.take(args.length).mkString(" ").toLowerCase()
-        val gr = db.run(labs.filter(x => x.classId === subject && !x.groupId.isEmpty).map(x => x.groupId).result)
-        Await.result(gr, 500.millis)
-        if (gr.value.get.get.nonEmpty) {
-          reply(s"Groups are \n${gr.value.get.get.map(e => e.get).mkString("\n")}").void
-        }
-        else reply("There are no labs for this subject, hence, groups does not matter. If you want to see more info," +
-          " go directly to timetable using 'core_link' ", replyMarkup = None).void
+        db.run(labs.filter(x => x.classId === subject && !x.groupId.isEmpty).map(x => x.groupId).result).flatMap { gr =>
+          if (gr.nonEmpty) {
+            reply(s"Groups are \n${gr.map(e => e.get).mkString("\n")}")
+          }
+          else reply("There are no labs for this subject, hence, groups does not matter. If you want to see more info," +
+            " go directly to timetable using 'core_link' ", replyMarkup = None)
+        }.void
       }
     }
   }
@@ -244,26 +247,31 @@ class ScheduleBot(val token: String,
         if (!groupTags.contains(group)) reply(s"$group is invalid group. Use 'groups' to see the list of all groups ").void
         else {
           val subject = args.take(args.length).drop(1).mkString(" ").toLowerCase()
-          val isReal = db.run(cores.filter(_.classId === subject).exists.result)
-          Await.result(isReal, 500.millis)
-          val isInLabs = db.run(labs.filter(x => x.classId === subject && !x.groupId.isEmpty && x.groupId === group).exists.result)
-          Await.result(isInLabs, 500.millis)
-          if (!isReal.value.get.get && !isInLabs.value.get.get) reply(s"There is no such a core course").void
-          else {
-            if (isReal.value.get.get) {
-              val ifReal = db.run(cores.filter(_.classId === subject).result)
-              Await.result(ifReal, 500.millis)
-              setupCore(ifReal.value.get.get.head, subject, msg.from.get.id)
+          db.run(cores.filter(_.classId === subject).exists.result).flatMap { isReal =>
+            db.run(labs.filter(x => x.classId === subject && !x.groupId.isEmpty && x.groupId === group).
+              exists.result).flatMap { isInLabs =>
+              if (!isReal && !isInLabs) reply(s"There is no such a core course").void
+              else {
+                if (isReal) {
+                  val ifReal = db.run(cores.filter(_.classId === subject).result).flatMap {
+                    ifReal => Future(setupCore(ifReal.head, subject, msg.from.get.id))
+                  }
+                }
+                if (isInLabs) {
+                  val ifInLabs = db.run(labs.filter(x => x.classId === subject && !x.groupId.isEmpty && x.groupId === group)
+                    .result).flatMap { ifInLabs =>
+                    val c = setupLab(ifInLabs.head, msg.from.get.id)
+                    usersSchedulers = usersSchedulers :+ (msg.from.get.id, ifInLabs.head + "-lab", c)
+                    Future("lab scheduler added")
+                  }
+                  val insert = db.run(userLabs.insertOrUpdate(UsersLab(msg.from.get.id, subject, Some(group)))).flatMap {
+                    _ => Future("lab inserted")
+                  }
+                }
+                reply(s"Course $subject is successfully added for group $group")
+              }
             }
-            if (isInLabs.value.get.get) {
-              val ifInLabs = db.run(labs.filter(x => x.classId === subject && !x.groupId.isEmpty && x.groupId === group).result)
-              Await.result(ifInLabs, 500.millis)
-              setupLab(ifInLabs.value.get.get.head, msg.from.get.id)
-              val insert = db.run(userLabs.insertOrUpdate(UsersLab(msg.from.get.id, subject, Some(group))))
-              Await.result(insert, 500.millis)
-            }
-            reply(s"Course $subject is successfully added for group $group").void
-          }
+          }.void
         }
       }
     }
@@ -277,7 +285,7 @@ class ScheduleBot(val token: String,
         val subject = args.take(args.length).mkString(" ").toLowerCase()
         val isIn = usersSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject))
         if (isIn.nonEmpty) {
-          usersSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject)).map(x=>x._3.cancel())
+          usersSchedulers.filter(x => x._1 == msg.from.get.id && x._2.contains(subject)).map(x => x._3.cancel())
           usersSchedulers = usersSchedulers diff isIn
         }
         isIn.map(x => x._3.cancel())
@@ -314,19 +322,18 @@ class ScheduleBot(val token: String,
         if (checkInElectives) {
           deleteElective(subject, msg.from.get.id)
         }
-        val ifhasLabs = db.run(userLabs.filter(x => x.lab_id === subject && x.id === msg.from.get.id).exists.result)
-        Await.result(ifhasLabs, 500.millis)
-        if (ifhasLabs.value.get.get) {
-          val hasLabs = db.run(userLabs.filter(x => x.lab_id === subject && x.id === msg.from.get.id).delete)
-          Await.result(hasLabs, 100.millis)
-        }
-        val ifHasCores = db.run(courses.filter(x => x.class_id === subject && x.id === msg.from.get.id).exists.result)
-        Await.result(ifHasCores, 500.millis)
-        if (ifHasCores.value.get.get) {
-          val hasCores = db.run(courses.filter(x => x.class_id === subject && x.id === msg.from.get.id).delete)
-          Await.result(hasCores, 500.millis)
-        }
-        reply("The subject was successfully deleted").void
+        db.run(userLabs.filter(x => x.lab_id === subject && x.id === msg.from.get.id).exists.result).flatMap { ifhasLabs =>
+          if (ifhasLabs.value) {
+            db.run(userLabs.filter(x => x.lab_id === subject && x.id === msg.from.get.id).delete).flatMap { _ => Future("labs successfully deleted") }
+          }
+          db.run(courses.filter(x => x.class_id === subject && x.id === msg.from.get.id).exists.result).flatMap { ifHasCores =>
+            if (ifHasCores.value) {
+              db.run(courses.filter(x => x.class_id === subject && x.id === msg.from.get.id).delete).flatMap { _ => Future("cores successfully deleted") }
+            }
+            Future("cores successfully deleted")
+          }
+          reply("The subject was successfully deleted")
+        }.void
       }
     }
   }
@@ -334,20 +341,20 @@ class ScheduleBot(val token: String,
   onCommand("today") {
     implicit msg =>
       val theirCourses = courses.filter(_.id === msg.from.get.id).map(e => e.class_id).result
-      val f = db.run(theirCourses)
-      Await.result(f, 2.second)
-      val res = f.value.get.get
-      val dayOfWeek = todayDay(clock).toString.toLowerCase
-      val afterSearch = classesOnTheDay(dayOfWeek, res)
-      val todayLectures = afterSearch._1
-      val todayTutorials = afterSearch._2
-      val todayLabs = afterSearch._3
-      if (todayLectures.isEmpty && todayTutorials.isEmpty && todayLabs.isEmpty) reply(s"Your have no classes today").void
-      else {
-        val toPrint = s"Lectures \n ${todayLectures.mkString("\n")} \n Tutorials  \n ${todayTutorials.mkString("\n")}" +
-          s"\n Labs  \n ${todayLabs.mkString("\n")}"
-        reply(s"Your courses for today are \n $toPrint").void
-      }
+      db.run(theirCourses).flatMap { res =>
+        val dayOfWeek = todayDay(clock).toString.toLowerCase
+        val afterSearch = classesOnTheDay(dayOfWeek, res)
+        val todayLectures = afterSearch._1
+        val todayTutorials = afterSearch._2
+        val todayLabs = afterSearch._3
+        if (todayLectures.isEmpty && todayTutorials.isEmpty && todayLabs.isEmpty) reply(s"Your have no classes today")
+        else {
+          val toPrint = s"Lectures \n ${todayLectures.mkString("\n")} \n Tutorials  \n ${todayTutorials.mkString("\n")}" +
+            s"\n Labs  \n ${todayLabs.mkString("\n")}"
+          reply(s"Your courses for today are \n $toPrint")
+        }
+
+      }.void
   }
 
 
@@ -395,8 +402,7 @@ class ScheduleBot(val token: String,
   }
 
   def setupLab(e: (Parsing.Labs, Option[String]), fromId: Int): Cancelable = {
-    val kk = timeTill(e._1.weekday, e._1.time.substring(0, 5), clock)
-    scheduler.scheduleWithFixedDelay(kk.minutes, 7.days) {
+    scheduler.scheduleWithFixedDelay(timeTill(e._1.weekday, e._1.time.substring(0, 5), clock).minutes, 7.days) {
       request(SendMessage(Chat(fromId), s"Your lab from ${e._1.ta} on ${e._1.courseName} will be " +
         s"in 10 minutes (${e._1.time}) at room ${e._1.room}"))
     }
@@ -415,44 +421,32 @@ class ScheduleBot(val token: String,
       }
       usersSchedulers = usersSchedulers :+ (fromId, course + "-tut", c)
     }
-    val todb = db.run(DBIO.seq(courses.insertOrUpdate(UsersCourse(fromId, course, false))))
-    Await.result(todb, 500.millis)
   }
 
-  def setupCoursesAndLabs(value: String, cbq: CallbackQuery): Unit = {
+  def setupCoursesAndLabs(value: String, cbq: CallbackQuery): Future[List[Int]] = {
     val theirLabs = labs.filter(_.groupId === value).result
-    val ret = db.run(theirLabs)
-    Await.result(ret, 2.seconds)
-//    todo if not success
-    val res = ret.value.get.get
-    val toInsert = res.map(el => userLabs.insertOrUpdate(UsersLab(cbq.from.id, el._1.courseName, Some(value))))
-    val labsinOneGo = DBIO.sequence(toInsert)
-    val labsdbioFuture = db.run(labsinOneGo)
-    Await.result(labsdbioFuture, 500.millis).sum
-    for (e <- res) {
-      val c = setupLab(e, cbq.from.id)
-      usersSchedulers = usersSchedulers :+ (cbq.from.id, e._1.courseName + "-lab", c)
+    db.run(theirLabs).flatMap { res =>
+      for (e <- res) {
+        val c = setupLab(e, cbq.from.id)
+        usersSchedulers = usersSchedulers :+ (cbq.from.id, e._1.courseName + "-lab", c)
+      }
+      val labsinOneGo = DBIO.sequence(res.map(el => userLabs.insertOrUpdate(UsersLab(cbq.from.id, el._1.courseName, Some(value)))))
+      //      todo ??? after db.run?
+      db.run(labsinOneGo).flatMap(_=>Future("success"))
+      //           res.foreach{e => {
+      //      val c = setupLab(e, cbq.from.id)
+      //      usersSchedulers = usersSchedulers :+ (cbq.from.id, e._1.courseName + "-lab", c)
+      //    }}
     }
-    //    res.foreach{e => {
-    //      val c = setupLab(e, cbq.from.id)
-    //      usersSchedulers = usersSchedulers :+ (cbq.from.id, e._1.courseName + "-lab", c)
-    //    }}
     Parsing.groupSubjects(coreFile, value) match {
       case Right(v) =>
         val unique = Parsing.uniqueCourses(v, false)
-        for (u <- unique) {
-          val result = db.run(DBIO.seq(courses.insertOrUpdate(UsersCourse(cbq.from.id, u, false))))
-          Await.result(result, 500.millis)
-          // for regular classes we assume it to be every week
-          val theCourse = db.run(cores.filter(_.classId === u).result)
-          Await.result(theCourse, 500.millis)
-          val res = theCourse.value.get.get.head
-          //          in time there are always more than 5 symbols hence, should I check?
-          //          example of check is here
-          //          https://stackoverflow.com/questions/1583940/how-do-i-get-the-first-n-characters-of-a-string-without-checking-the-size-or-goi
-          setupCore(res, u, cbq.from.id)
+        unique.foreach { e =>
+          db.run(cores.filter(_.classId === e).result).flatMap(res => Future(setupCore(res.head, e, cbq.from.id)))
         }
-      case _ => Unit
+        val toInsert = unique.map(u => courses.insertOrUpdate(UsersCourse(cbq.from.id, u, false)))
+        db.run(DBIO.sequence(toInsert))
+      case _ => Future(List(0))
     }
   }
 
@@ -468,9 +462,13 @@ class ScheduleBot(val token: String,
   def deleteAllReminders(): Unit = {
     usersSchedulers.map(el => el._3.cancel())
     usersSchedulers = List.empty: List[(Int, String, Cancelable)]
-    usersElectiveSchedulers.map(el => el._3.map(e => {e._1.cancel();e._2.cancel()}))
+    usersElectiveSchedulers.map(el => el._3.map(e => {
+      e._1.cancel();
+      e._2.cancel()
+    }))
     usersElectiveSchedulers = List.empty: List[(Int, String, List[(Cancelable, Cancelable)])]
   }
+
 
   def deleteElective(electiveName: String, userId: Int): Unit = {
     val elects = usersElectiveSchedulers.filter(e => e._2 == electiveName && e._1 == userId)
@@ -479,8 +477,12 @@ class ScheduleBot(val token: String,
       x._2.cancel()
     })
     usersElectiveSchedulers = usersElectiveSchedulers diff elects
-    elects.flatMap(x => x._3).foreach(x => {x._1.cancel();x._2.cancel()})
+    elects.flatMap(x => x._3).foreach(x => {
+      x._1.cancel();
+      x._2.cancel()
+    })
   }
+
 
   onCallbackQuery { implicit cbq =>
     val res = hasGroupTag(cbq, groupTags)
@@ -489,10 +491,8 @@ class ScheduleBot(val token: String,
         val ackFuture = ackCallback(Some(s"${cbq.from.firstName} pressed the button with $value"))(cbq)
         //        one user will not be created twice due to the primary keys
         //        todo return message "use /change_group"
-
-        val insert = db.run(DBIO.seq(users += User(cbq.from.id, value)))
-        Await.result(insert, 1000.millis)
-        setupCoursesAndLabs(value, cbq)
+        db.run(DBIO.seq(users += User(cbq.from.id, value))).flatMap(_ => Future("group inserted"))
+        setupCoursesAndLabs(value, cbq).onComplete(_ => Future("classes inserted"))
         val fut = emptyMarkup(cbq)
         ackFuture.zip(fut.getOrElse(Future.successful(()))).void
 
@@ -501,8 +501,7 @@ class ScheduleBot(val token: String,
         elec match {
           case Some(value) =>
             val ackFuture = ackCallback(Some(s"${cbq.from.firstName} pressed the button with ${value}"))(cbq)
-            val result = db.run(DBIO.seq(courses += UsersCourse(cbq.from.id, value, true)))
-            Await.result(result, 1.second)
+            val result = db.run(DBIO.seq(courses += UsersCourse(cbq.from.id, value, true))).flatMap(_ => Future("elective added"))
             setupElective(value, cbq.from.id)
             val fut = emptyMarkup(cbq)
             ackFuture.zip(fut.getOrElse(Future.successful(()))).void
@@ -511,52 +510,42 @@ class ScheduleBot(val token: String,
             val updateGroup = hasGroupTag(cbq, updatedGroupTags)
             updateGroup match {
               case Some(valueDirty) =>
-                //                println(s"before $usersSchedulers")
                 val value = valueDirty.replace("updated-", "").toUpperCase()
                 val ackFuture = ackCallback(Some(s"${cbq.from.firstName} pressed the button with $value"))(cbq)
-                val prevGroup = db.run(users.filter(_.id === cbq.from.id).map(e => e.group_id).result)
-                Await.result(prevGroup, 1.second)
-
-                val insert = db.run(DBIO.seq(users.insertOrUpdate(User(cbq.from.id, value))))
-                Await.result(insert, 500.millis)
-
                 //this will delete all labs for the prev group and this person
-                if (prevGroup.value.get.get.nonEmpty) {
-                  val oldLabs = userLabs.filter(x => (x.id === cbq.from.id
-                    &&
-                    !x.group_id.isEmpty
-                    &&
-                    x.group_id === prevGroup.value.get.get.head))
-                  val intermediateLabs = db.run(oldLabs.map(e => e.lab_id).result)
-                  Await.result(intermediateLabs, 500.millis)
-                  deleteReminders(intermediateLabs.value.get.get, cbq.from.id)
+                db.run(users.filter(_.id === cbq.from.id).map(e => e.group_id).result).flatMap { prevGroup =>
+                  if (prevGroup.nonEmpty) {
+                    val oldLabs = userLabs.filter(x => (x.id === cbq.from.id
+                      &&
+                      !x.group_id.isEmpty
+                      &&
+                      x.group_id === prevGroup.head))
+                    db.run(oldLabs.map(e => e.lab_id).result).flatMap { intermediateLabs =>
+                      Future(deleteReminders(intermediateLabs, cbq.from.id))
+                    }
+                    db.run(oldLabs.delete).flatMap{ _ => Future("affected rows deleted") }
 
-                  val action = oldLabs.delete
-                  val affectedRowsCount: Future[Int] = db.run(action)
-                  Await.result(affectedRowsCount, 1.second)}
+                  }
+                  Future("there were no prev group")
+                }
+                val oldCourses = courses.filter(x => x.id === cbq.from.id && !x.is_elective)
+                db.run(oldCourses.map(e => e.class_id).result).flatMap { intermediateCores =>
+                  Future(deleteReminders(intermediateCores, cbq.from.id))
+                }
 
-                  val oldCourses = courses.filter(x => x.id === cbq.from.id && !x.is_elective)
-                  val intermediateCores = db.run(oldCourses.map(e => e.class_id).result)
-                  Await.result(intermediateCores, 500.millis)
-                  deleteReminders(intermediateCores.value.get.get, cbq.from.id)
+                db.run(oldCourses.delete).flatMap(_ => Future("updated"))
 
-                  val action2 = oldCourses.delete
-                  val affectedRowsCount2: Future[Int] = db.run(action2)
-                  Await.result(affectedRowsCount2, 1.second)
-
-
-                  setupCoursesAndLabs(value, cbq)
-                  //                println(s"after $usersSchedulers")
-                  val fut = emptyMarkup(cbq)
-                  ackFuture.zip(fut.getOrElse(Future.successful(()))).void
+                db.run(DBIO.seq(users.insertOrUpdate(User(cbq.from.id, value)))).flatMap{ _ => Future("group changed") }
 
 
+                setupCoursesAndLabs(value, cbq).flatMap(_=> Future("cores setted"))
 
-                  case _ =>
-                    val ackFuture = ackCallback(None)(cbq)
-                    val fut = emptyMarkup(cbq)
-                    ackFuture.zip(fut.getOrElse(Future.successful(()))).void
-
+                val fut = emptyMarkup(cbq)
+                ackFuture.zip(fut.getOrElse(Future.successful(()))).void
+              case _ =>
+                val ackFuture = ackCallback(None)(cbq)
+                val fut = emptyMarkup(cbq)
+                ackFuture.zip(fut.getOrElse(Future.successful(()))).void
             }
         }
     }

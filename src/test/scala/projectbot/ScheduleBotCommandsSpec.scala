@@ -6,7 +6,9 @@ import com.bot4s.telegram.models.{CallbackQuery, User}
 import org.scalatest.{FlatSpec, Matchers}
 
 import scala.concurrent.Await
-import slick.driver.SQLiteDriver.api._
+//import slick.driver.SQLiteDriver.api._
+import slick.driver.PostgresDriver.api._
+
 import monix.execution.Scheduler.{global => scheduler}
 import projectbot.MyTables.{UsersCourse, UsersLab}
 import projectbot.Parsing.Core
@@ -18,10 +20,11 @@ class ScheduleBotCommandsSpec extends FlatSpec  with TestUtils with CommandImpli
   val electiveFile = "Electives Schedule Spring 2020 Bachelors - Main.csv"
   val electiveLink = "https://docs.google.com/electives"
   val coreLink = "https://docs.google.com/cores"
-  val db = Database.forConfig("bot")
+  val db = Database.forConfig("mydb")
   MyTables.createTables(db)
   MyTables.fillDatabase(db, coreFile)
   val bot = new ScheduleBot("token", coreLink, electiveLink, coreFile, electiveFile, db)(scheduler) (Clock.systemDefaultZone)
+
 
   it should "change group correctly" in {
     val insert = db.run(bot.courses.insertOrUpdate(UsersCourse(123,"data structure and algorithms", false)))
@@ -29,6 +32,7 @@ class ScheduleBotCommandsSpec extends FlatSpec  with TestUtils with CommandImpli
     val insertLab = db.run(bot.userLabs.insertOrUpdate(UsersLab(123, "data structure and algorithms", Some("B19-01"))))
     Await.result(insertLab, 3.second)
     bot.receiveExtMessage((textMessage("/set_subject_group B19-03 data structure and algorithms"), Some(botUser)))
+    Thread.sleep(5000)
     val indb = db.run(bot.userLabs.filter(x=>x.id===123 && x.lab_id==="data structure and algorithms").map(e=>e.group_id).result)
     Await.result(indb, 3.second)
     val res = indb.value.get.get
@@ -56,6 +60,7 @@ class ScheduleBotCommandsSpec extends FlatSpec  with TestUtils with CommandImpli
 
   it should "set cores correctly" in {
     bot.receiveExtMessage((textMessage("/set_core M19-DS-01 advanced information retrieval"), Some(botUser)))
+    Thread.sleep(5000)
     val indb = db.run(bot.userLabs.filter(x=>x.id===123 && x.lab_id==="advanced information retrieval").map(e=>e.group_id).result)
     Await.result(indb, 3.second)
     val res = indb.value.get.get
@@ -89,7 +94,10 @@ class ScheduleBotCommandsSpec extends FlatSpec  with TestUtils with CommandImpli
   it should "delete_subject correctly for existing notifications for cores" in {
     bot.setupCore(Core("monday", "14:10-15:40", "data structure and algorithms", "adil khan", 108, Some("monday"),
       Some("15:45-17:15"), Some("luiz araújo"), Some(108)), "data structure and algorithms", 123)
+    val todb = db.run(bot.courses.insertOrUpdate(UsersCourse(123, "data structure and algorithms",false)))
+    Await.result(todb, 5.seconds)
     bot.receiveExtMessage((textMessage("/delete_subject data structure and algorithms"), Some(botUser)))
+    Thread.sleep(5000)
     val c = bot.usersSchedulers.count(e=>e._1==123 && e._2=="data structure and algorithms")
     val indb = db.run(bot.courses.filter(x=>x.id===123 && x.class_id==="data structure and algorithms").result)
     Await.result(indb, 1.second)
@@ -98,6 +106,7 @@ class ScheduleBotCommandsSpec extends FlatSpec  with TestUtils with CommandImpli
 
   it should "delete_subject correctly for non-existing notifications for cores" in {
     bot.receiveExtMessage((textMessage("/delete_subject data structure and algorithms"), Some(botUser)))
+    Thread.sleep(5000)
     val c = bot.usersSchedulers.count(e=>e._1==123 && e._2=="data structure and algorithms")
     val indb = db.run(bot.courses.filter(x=>x.id===123 && x.class_id==="data structure and algorithms").result)
     Await.result(indb, 1.second)
@@ -110,6 +119,7 @@ class ScheduleBotCommandsSpec extends FlatSpec  with TestUtils with CommandImpli
     Await.result(todb, 1.second)
     bot.setupElective("functional programming and scala language", 123)
     bot.receiveExtMessage((textMessage("/delete_subject functional programming and scala language"), Some(botUser)))
+    Thread.sleep(5000)
     val c = bot.usersSchedulers.count(e=>e._1==123 && e._2=="functional programming and scala language")
     val indb = db.run(bot.courses.filter(x=>x.id===123 && x.class_id==="functional programming and scala language").result)
     Await.result(indb, 1.second)
@@ -119,6 +129,7 @@ class ScheduleBotCommandsSpec extends FlatSpec  with TestUtils with CommandImpli
 
   it should "delete_subject correctly for non-existing notifications for electives" in {
     bot.receiveExtMessage((textMessage("/delete_subject functional programming and scala language"), Some(botUser)))
+    Thread.sleep(5000)
     val c = bot.usersSchedulers.count(e=>e._1==123 && e._2=="functional programming and scala language")
     val indb = db.run(bot.courses.filter(x=>x.id===123 && x.class_id==="functional programming and scala language").result)
     Await.result(indb, 1.second)
@@ -132,20 +143,21 @@ class ScheduleBotCommandsSpec extends FlatSpec  with TestUtils with CommandImpli
       chatInstance = "8722516864877688585",
       data=Some("B19-03"), gameShortName=None )
     bot.receiveCallbackQuery(cbq)
+    Thread.sleep(5000)
     val indb = db.run(bot.courses.filter(x=>x.id===111 && !x.is_elective).map(x=>x.class_id).result)
-    Await.result(indb, 1.second)
+    Await.result(indb, 5.seconds)
     val inUsers = db.run(bot.users.filter(x=>x.id===111).map(x=>x.group_id).result)
-    Await.result(inUsers, 1.second)
+    Await.result(inUsers, 5.seconds)
     val inLabs = db.run(bot.userLabs.filter(x=>x.id===111).result)
-    Await.result(inLabs, 1.second)
-    val expectedLab = Vector(UsersLab(111,"analytical geometry and linear algebra 2",Some("B19-03")),
+    Await.result(inLabs, 5.seconds)
+    val expectedLab = Set(UsersLab(111,"analytical geometry and linear algebra 2",Some("B19-03")),
       UsersLab(111,"data structure and algorithms",Some("B19-03")), UsersLab(111,"english (5)",Some("B19-03")),
       UsersLab(111,"introduction to programming 2",Some("B19-03")), UsersLab(111,"mathematical analysis 2",Some("B19-03")),
       UsersLab(111,"theoretical computer science",Some("B19-03")))
     val expectedGroup = Vector("B19-03")
-    val expectedCores = Vector("analytical geometry and linear algebra 2", "data structure and algorithms",
+    val expectedCores = Set("analytical geometry and linear algebra 2", "data structure and algorithms",
       "introduction to programming 2", "mathematical analysis 2", "theoretical computer science")
-    (indb.value.get.get, inLabs.value.get.get, inUsers.value.get.get) shouldBe (expectedCores
+    (indb.value.get.get.toSet, inLabs.value.get.get.toSet, inUsers.value.get.get) shouldBe (expectedCores
       , expectedLab, expectedGroup)
     bot.deleteAllReminders()
   }
@@ -157,19 +169,20 @@ class ScheduleBotCommandsSpec extends FlatSpec  with TestUtils with CommandImpli
       chatInstance = "8722516864877688585",
       data=Some("updated-b18-03"), gameShortName=None )
     bot.receiveCallbackQuery(cbq)
+    Thread.sleep(30000)
     val indb = db.run(bot.courses.filter(x=>x.id===111 && !x.is_elective).map(x=>x.class_id).result)
-    Await.result(indb, 1.second)
+    Await.result(indb, 5.seconds)
     val inUsers = db.run(bot.users.filter(x=>x.id===111).map(x=>x.group_id).result)
-    Await.result(inUsers, 1.second)
+    Await.result(inUsers, 5.seconds)
     val inLabs = db.run(bot.userLabs.filter(x=>x.id===111).result)
-    Await.result(inLabs, 1.second)
-    val expectedLab = Vector(UsersLab(111,"control theory",Some("B18-03")), UsersLab(111,"data modeling and databases 2",
+    Await.result(inLabs, 5.seconds)
+    val expectedLab = Set(UsersLab(111,"control theory",Some("B18-03")), UsersLab(111,"data modeling and databases 2",
       Some("B18-03")), UsersLab(111,"introduction to ai",Some("B18-03")), UsersLab(111,"networks",Some("B18-03")),
       UsersLab(111,"probability and statistics",Some("B18-03")), UsersLab(111,"software project",Some("B18-03")))
     val expectedGroup = Vector("B18-03")
-    val expectedCores = Vector("control theory", "data modeling and databases 2", "introduction to ai", "networks",
+    val expectedCores = Set("control theory", "data modeling and databases 2", "introduction to ai", "networks",
       "probability and statistics", "software project")
-    (indb.value.get.get, inLabs.value.get.get, inUsers.value.get.get) shouldBe (expectedCores
+    (indb.value.get.get.toSet, inLabs.value.get.get.toSet, inUsers.value.get.get) shouldBe (expectedCores
       , expectedLab, expectedGroup)
     bot.deleteAllReminders()
   }
@@ -181,19 +194,20 @@ class ScheduleBotCommandsSpec extends FlatSpec  with TestUtils with CommandImpli
       chatInstance = "8722516864877688585",
       data=Some("updated-b18-03"), gameShortName=None )
     bot.receiveCallbackQuery(cbq)
+    Thread.sleep(30000)
     val indb = db.run(bot.courses.filter(x=>x.id===1000 && !x.is_elective).map(x=>x.class_id).result)
-    Await.result(indb, 1.second)
+    Await.result(indb, 5.seconds)
     val inUsers = db.run(bot.users.filter(x=>x.id===1000).map(x=>x.group_id).result)
-    Await.result(inUsers, 1.second)
+    Await.result(inUsers, 5.seconds)
     val inLabs = db.run(bot.userLabs.filter(x=>x.id===1000).result)
-    Await.result(inLabs, 1.second)
-    val expectedLab = Vector(UsersLab(1000,"control theory",Some("B18-03")), UsersLab(1000,"data modeling and databases 2",
+    Await.result(inLabs, 5.seconds)
+    val expectedLab = Set(UsersLab(1000,"control theory",Some("B18-03")), UsersLab(1000,"data modeling and databases 2",
       Some("B18-03")), UsersLab(1000,"introduction to ai",Some("B18-03")), UsersLab(1000,"networks",Some("B18-03")),
       UsersLab(1000,"probability and statistics",Some("B18-03")), UsersLab(1000,"software project",Some("B18-03")))
     val expectedGroup = Vector("B18-03")
-    val expectedCores = Vector("control theory", "data modeling and databases 2", "introduction to ai", "networks",
+    val expectedCores = Set("control theory", "data modeling and databases 2", "introduction to ai", "networks",
       "probability and statistics", "software project")
-    (indb.value.get.get, inLabs.value.get.get, inUsers.value.get.get) shouldBe (expectedCores, expectedLab, expectedGroup)
+    (indb.value.get.get.toSet, inLabs.value.get.get.toSet, inUsers.value.get.get) shouldBe (expectedCores, expectedLab, expectedGroup)
     bot.deleteAllReminders()
   }
 
@@ -204,8 +218,9 @@ class ScheduleBotCommandsSpec extends FlatSpec  with TestUtils with CommandImpli
       chatInstance = "8722516864877688585",
       data=Some("advanced agile software design"), gameShortName=None )
     bot.receiveCallbackQuery(cbq)
+    Thread.sleep(15000)
     val indb = db.run(bot.courses.filter(x=>x.id===1000 && x.is_elective).result)
-    Await.result(indb, 1.second)
+    Await.result(indb, 5.seconds)
     indb.value.get.get shouldBe Vector(UsersCourse(1000, "advanced agile software design", true))
     bot.deleteAllReminders()
   }
@@ -217,6 +232,7 @@ class ScheduleBotCommandsSpec extends FlatSpec  with TestUtils with CommandImpli
       chatInstance = "8722516864877688585",
       data=Some("cats-top"), gameShortName=None )
     bot.receiveCallbackQuery(cbq)
+    Thread.sleep(5000)
     bot.deleteAllReminders()
   }
 

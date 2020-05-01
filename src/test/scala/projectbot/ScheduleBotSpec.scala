@@ -8,17 +8,20 @@ import com.bot4s.telegram.models.{CallbackQuery, InlineKeyboardButton, User}
 import monix.execution.Cancelable
 
 import scala.concurrent.duration._
-import slick.driver.SQLiteDriver.api._
+//import slick.driver.SQLiteDriver.api._
+import slick.driver.PostgresDriver.api._
+
 import monix.execution.Scheduler.{global => scheduler}
 import projectbot.MyTables.UsersCourse
 import projectbot.Parsing.Core
 
-import scala.concurrent.Await
+import scala.concurrent.{Await, ExecutionContext, Future}
+import scala.util.Success
 
 
 class ScheduleBotSpec extends FlatSpec with Matchers {
 //  empty database for tests
-  val db = Database.forConfig("bot")
+  val db = Database.forConfig("mydb")
 //  you need to uncomment it if testing only this block of tests
 //  MyTables.createTables(db)
   val coreFile = "Core Courses_Spring_2019-2020 - BS,MS_Spring 2019.csv"
@@ -201,29 +204,20 @@ class ScheduleBotSpec extends FlatSpec with Matchers {
       chatInstance = "8722516864877688585",
       data=Some("B18-03"), gameShortName=None )
     MyTables.fillDatabase(db, coreFile)
+    implicit val ec = ExecutionContext.global
     localbot.setupCoursesAndLabs("B19-03", cbq)
-
+    Thread.sleep(10000)
     val expectedTasks = 17
     val tasks = tScheduler.state.tasks.size
-    val cores = db.run(localbot.courses.filter(_.id===299308946).result)
-    Await.result(cores, 100.millis)
-    val expectedCores = Vector(UsersCourse(299308946,"analytical geometry and linear algebra 2",false),
-      UsersCourse(299308946,"data structure and algorithms",false),
-      UsersCourse(299308946,"introduction to programming 2",false),
-      UsersCourse(299308946,"mathematical analysis 2",false),
-      UsersCourse(299308946,"theoretical computer science",false))
-    (tasks, cores.value.get.get) shouldBe (expectedTasks, expectedCores)
-  }
+    val cores = db.run(localbot.courses.filter(_.id === 299308946).result)
+    Await.result(cores, 5.seconds)
+    val expectedCores = Vector(UsersCourse(299308946, "analytical geometry and linear algebra 2", false),
+      UsersCourse(299308946, "data structure and algorithms", false),
+      UsersCourse(299308946, "introduction to programming 2", false),
+      UsersCourse(299308946, "mathematical analysis 2", false),
+      UsersCourse(299308946, "theoretical computer science", false)).toSet
+    (tasks, cores.value.get.get.toSet) shouldBe(expectedTasks, expectedCores)
 
-// schedulers will be tested in other place
-  "setupCore" should "setup both db insert and reminders setup" in {
-    bot.setupCore(Core("monday", "09:00", "introduction to ai", "brown", 105, None, None, None, None),
-      "introduction to ai" , 1)
-    val insertCheck = db.run(bot.courses.filter(_.id===1).result)
-    Await.result(insertCheck, 100.millis)
-    (bot.usersSchedulers.map(e=>(e._1, e._2)), insertCheck.value.get.get) shouldBe (List((1,"introduction to ai-lec")),
-      Vector(UsersCourse(1, "introduction to ai", false)))
-    bot.deleteAllReminders()
   }
 
 //  case class Labs(weekday: String, time: String, courseName: String, ta: String, room: Int)
@@ -298,6 +292,7 @@ class ScheduleBotSpec extends FlatSpec with Matchers {
   }
 
   "classesOnTheDay" should "work correctly" in {
+    implicit val ec = ExecutionContext.global
     val cbq = CallbackQuery(id = "1285522135998800610",
       from = User(id=399308946, isBot = false, firstName = "cat", lastName = None, username = None, languageCode = None),
       message=None, inlineMessageId=None,
@@ -306,9 +301,10 @@ class ScheduleBotSpec extends FlatSpec with Matchers {
 //    you need to uncomment it if testing only this block of tests
 //    MyTables.fillDatabase(db, coreFile)
     bot.setupCoursesAndLabs("B18-03", cbq)
+    Thread.sleep(20000)
     val theirCourses = bot.courses.filter(_.id === 399308946).map(e => e.class_id).result
     val f = db.run(theirCourses)
-    Await.result(f, 2.second)
+    Await.result(f, 5.seconds)
 
 
     val res = f.value.get.get
@@ -317,8 +313,7 @@ class ScheduleBotSpec extends FlatSpec with Matchers {
       ("introduction to ai","joseph brown","09:00-10:30",105)),
       List(("data modeling and databases 2",Some("luiz araújo"),Some("14:10-15:40"),Some(105))),
       List(("introduction to ai","hamna aslam","15:45-17:15",303)))
-
-    todayClasses shouldBe expected
+    (todayClasses._1.sorted, todayClasses._2.sorted, todayClasses._3.sorted) shouldBe expected
   }
 //  db.close()
 }

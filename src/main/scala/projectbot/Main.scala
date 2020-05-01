@@ -3,7 +3,9 @@ package projectbot
 import java.time.Clock
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
-import slick.driver.SQLiteDriver.api._
+//import slick.driver.SQLiteDriver.api._
+import slick.driver.PostgresDriver.api._
+
 import pureconfig.ConfigSource
 import pureconfig._
 import pureconfig.generic.auto._
@@ -16,9 +18,10 @@ object Main extends App {
     case Right(conf) => {
       //  Part with database
 
-      val db = Database.forConfig("bot")
-      MyTables.createTables(db)
-      MyTables.fillDatabase(db, conf.coreFile)
+      val db = Database.forConfig("mydb")
+      try {
+//      MyTables.createTables(db)
+//      MyTables.fillDatabase(db, conf.coreFile)
       val bot = new ScheduleBot(conf.token, conf.coreLink, conf.electiveLink, conf.coreFile, conf.electiveFile, db)(scheduler) (Clock.systemDefaultZone)
 
       //     To run spawn the bot
@@ -31,7 +34,8 @@ object Main extends App {
       // Wait for the bot end-of-life
       Await.result(eol, Duration.Inf)
       bot.deleteAllReminders()
-      db.close()
+      }
+      finally db.close()
     }
     case Left(error) =>
       println("no config")

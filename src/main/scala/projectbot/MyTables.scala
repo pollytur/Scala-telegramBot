@@ -2,7 +2,9 @@ package projectbot
 
 import projectbot.Parsing.Core
 import projectbot.Parsing.{Labs => LabsMock}
-import slick.driver.SQLiteDriver.api._
+//import slick.driver.SQLiteDriver.api._
+import slick.driver.PostgresDriver.api._
+
 import scala.concurrent.Await
 import scala.concurrent.duration._
 
@@ -34,7 +36,7 @@ object MyTables {
     def id = column[Int]("id")
     def lab_id = column[String]("lab_id")
     def group_id = column[Option [String]]("group_id")
-    def pk = primaryKey("pk", (id, lab_id))
+    def pk = primaryKey("pk_2", (id, lab_id))
     def * = (id, lab_id, group_id )<> (UsersLab.tupled, UsersLab.unapply)
   }
 
@@ -67,7 +69,7 @@ object MyTables {
     def labRoom = column[Int]("lab_room")
     def groupId = column[Option[String]]("group_id")
 //    pk is such because there are courses which can have more than 1 lab and those labs may be at 1 day
-    def pk = primaryKey("pk", (classId, groupId, labDay, labTime))
+    def pk = primaryKey("pk_3", (classId, groupId, labDay, labTime))
     def * = (labDay, labTime, classId, ta, labRoom, groupId).shaped <>
       ({case (labDay, labTime, classId, ta, labRoom, groupId) =>
         (LabsMock(labDay, labTime, classId, ta, labRoom), groupId)},
@@ -93,7 +95,7 @@ object MyTables {
         userLabs.schema.create
       )
       val result = db.run(setup)
-      Await.result(result, 2.second)
+      Await.result(result, 15.seconds)
     }
   }
 

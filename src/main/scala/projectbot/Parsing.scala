@@ -1,13 +1,14 @@
 package projectbot
 
+import java.io.InputStream
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.text.SimpleDateFormat
 import java.util.Date
-
 import scala.io.Source
 import scala.util.control.Breaks.{break, breakable}
 
+//here awaits are ok because it is bot initialization
 object Parsing {
   val weekdays = List("monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday")
   val timePattern = "\\d\\d:\\d\\d-\\d\\d:\\d\\d"
@@ -41,12 +42,21 @@ object Parsing {
     else true
   }
 
-  def readData(fileName: String): Vector[Array[String]] = {
-    for {
-      line <- Source.fromResource(fileName).getLines().toVector
+  def readData(fileName: String): Vector[Array[String]] = synchronized {
+
+    val stream: InputStream = getClass.getClassLoader.getResourceAsStream(fileName)
+    val lines: Iterator[String] = scala.io.Source.fromInputStream( stream ).getLines
+
+//    val resource = Source.fromResource(fileName)
+    val values = for {
+      line <- lines.toVector
       //      values = line.split(",").map(_.trim)
       values = line.split(",")
     } yield values
+//    resource.close()
+    stream.close()
+
+    values
   }
 
   def groups(fileName: String): List[String] = {

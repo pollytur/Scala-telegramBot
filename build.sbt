@@ -14,6 +14,6 @@ libraryDependencies ++= Seq(
   "org.scalaj"            %%    "scalaj-http"          % "2.4.2",
   "com.bot4s"             %%    "telegram-akka"        % "4.4.0-RC2",
   "io.monix"              %%    "monix"                % "3.0.0",
-  "org.scalatest"         %%    "scalatest"            % "3.0.8" % Test
-
+  "org.scalatest"         %%    "scalatest"            % "3.0.8" % Test,
+  "org.postgresql"        %     "postgresql"           % "9.4-1206-jdbc42"
 )
